@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import uuid from 'uuid';
 const Store = {
     items:  [
@@ -6,7 +5,7 @@ const Store = {
         {
             id: uuid.v4(),
             category: {name:"womens fashion", url:"womens-fashion"},
-            banner: { url: "5845642_51.jpg" },
+            banner: { url: "admin.jpg" },
             products: [{ id: uuid.v4(), url: "1(35).jpg", title: "Lorem ipsumq adipisicing elit.", price: "$43,232", discount: "-32%", slash: "$24,320" },
                 { id: uuid.v4(), url: "coll5.jpg", title: "amet consectetur adipisicing elit.", price: "$402", discount: "-2%", slash: "$320" },
             { id: uuid.v4(),  url: "1(34).jpg", title: "Lorem ipsum dolor sit kamet lit.", price: "$43332", discount: "-3%", slash: "$4,320" },
@@ -36,7 +35,7 @@ const Store = {
         {
             id: uuid.v4(),
             category: { name: "Phones $ Tablet", url: "phones&tablet" },
-            banner: { url: "5428862_51.jpg" },
+            banner: { url: "5845642_51.jpg" },
             products: [{ id: uuid.v4(), url: "demo1_product6_208x208-300x300.jpg", title: "Loreom ipsum adipisicing elit.", price: "$43,232", discount: "-32%", slash: "$24,320" },
             { id: uuid.v4(),  url: "demo1_product7_208x208-1-300x300.jpg", title: "amet conisectetur adipisicing elit.", price: "$402", discount: "-2%", slash: "$320" },
             { id: uuid.v4(), url: "demo1_product8_208x208-300x300.jpg", title: "Lorem ipsum duolor sit amet lit.", price: "$43332", discount: "-3%", slash: "$4,320" },
@@ -50,7 +49,7 @@ const Store = {
         },
            {  id: uuid.v4(),
                 category: {name:"Accessories", url:"saccessories"},
-                banner: {url: "DesktopSlider(1).jpg"},
+                banner: { url: "5428862_51.jpg"},
                 products: [{ id: uuid.v4(), url: "other-6485-7077231-1-product.jpg", title: "Lorem ipsum adipisicing elit.", price: "$43,232", discount: "-32%", slash: "$24,320" },
                 { id: uuid.v4(),  url: "other-2454-770172-1-product.jpg", title: "ameet consectetur adipisicing elit.", price: "$402", discount: "-2%", slash: "$320" },
                 { id: uuid.v4(), url: "other-1731-2736721-1-product.jpg", title: "Lyorem ipsum dolor sit amet lit.", price: "$43332", discount: "-3%", slash: "$4,320" },

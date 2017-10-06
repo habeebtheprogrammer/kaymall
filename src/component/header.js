@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import Store from './data.js';
 import {Link} from 'react-router-dom'
 class Header extends Component {
     render() {
-        var img = window.location.pathname =='/'? 
-            <img src="../images/we-are-3-banner-2400x480-2.jpg" width="100%" className="img-responsive" alt="Image" />:null;
+        var img = window.location.pathname ==='/'? 
+            <img src="../images/we-are-3-banner-2400x480-2.jpg" width="100%" className="img-responsive" alt=""/>:null;
         
         return (
             <div>
                 {img}
-                <nav className="navbar navbar-custom fixed-bar" role="navigation" style={{padding:"0px 20px"}}>
+                <nav className="navbar navbar-custom fixed-bar"  style={{padding:"0px 20px"}}>
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                             <span className="sr-only">Toggle navigation</span>
@@ -38,27 +37,27 @@ class Header extends Component {
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#" className="cart-icon">
+                                <a href="/" className="cart-icon">
                                     <i className="fa fa-shopping-cart"></i>
                                     <span>3</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="cart-icon">
+                                <a href="/" className="cart-icon">
                                     <i className="fa fa-shopping-cart"></i>
                                     <span>3</span>
                                 </a>
                             </li>
                             <li className="dropdown">
-                                <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                <a href="/" className="dropdown-toggle" data-toggle="dropdown">
                                     
                                     
                                     Login/Sign up <b className="caret"></b></a>
                                 <ul className="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="/">Action</a></li>
+                                    <li><a href="/">Another action</a></li>
+                                    <li><a href="/">Something else here</a></li>
+                                    <li><a href="/">Separated link</a></li>
                                 </ul>
                             </li>
                         </ul>

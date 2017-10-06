@@ -7,11 +7,11 @@ class Footer extends Component {
                 <div className="news-letter" >
 
                     <div className="row">
-                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                        <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                             <p className="news-letter-title"> Newsletter Sign Up</p>
                             <p> Enter email address</p>
 
-                            <form action="" method="POST" className="form-inline" role="form" style={{ margin: "1% 0px 2%" }} >
+                            <form action="" method="POST" className="form-inline" style={{ margin: "1% 0px 2%" }} >
 
                                 <div className="form-group" style={{ width: "40%" }}>
                                     <label className="sr-only" >label</label>
@@ -34,16 +34,16 @@ class Footer extends Component {
                     <ul className="nav navbar-nav fixed-bottom " >
                     
                         <li className="dropdown ">
-                            <a href="#" className="dropdown-toggle" data-toggle="dropdown">Online 
+                            <a href="/" className="dropdown-toggle" data-toggle="dropdown">Online 
                                 
                                     <i className="fa fa-circle" style={{fontSize:"0.8em",color:"green",marginLeft:"5px"}}></i>
                                     
                                 <b className="caret" style={{marginLeft:"20px"}}></b></a>
                             <ul className="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="/">Action</a></li>
+                                <li><a href="/">Another action</a></li>
+                                <li><a href="/">Something else here</a></li>
+                                <li><a href="/">Separated link</a></li>
                             </ul>
                         </li>
                     </ul>

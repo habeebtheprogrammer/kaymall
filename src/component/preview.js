@@ -1,10 +1,183 @@
 import React, { Component } from 'react';
 import Store from './data'
+import {Link} from 'react-router-dom'
+import Locationbar from './locationbar';
+import Carousel from './carousel';
+
 const Preview = ({ match }) => {
-    
+        for(var i=0;i<Store.items.length; i++)
+        {
+            var findId = Store.items[i].products.find((item)=>{
+                return (item.title === match.params.id)});
+           if(findId !== undefined)  break;          
+                
+         }
+         if(findId === undefined) return <Locationbar match={match} />
     return (
-        <div className="container">
-            
+        <div className="preview">
+            <Locationbar match={match} />
+            <div className="container" >
+                    <div className="row">
+                        <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                            <div className="" style={{ background: "#fff",padding:"4% 0%",marginBottom:"20px" }} >
+                             
+                             <div className="row">
+                                <div className="col-xs-7 col-sm-7 col-md-7 col-lg-7 " style={{ padding: "0% 10%" }}>
+                                    <div style={{ border: "1px solid lightgrey"}}>
+                                        <Carousel img1={findId.url} img2={findId.url} img3={findId.url}/>
+                                    </div>
+                                 </div>
+                                 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <div style={{ padding: "0% 1%" }}>
+                                       <i> Sold by </i> 
+                                       <i className="fa fa-user"></i>
+                                        <span> Omalicha </span>
+                                        <p style={{fontSize:"1.7em", color:"#000"}}>{match.params.id}</p>
+                                        <div className="rating" style={{ color: "#faa819",display:"inline",fontSize:"1.3em"}}> 
+                                            <span>☆</span>
+                                            <span>☆</span>
+                                            <span>☆</span>
+                                            <span>☆</span>
+                                            <span>☆</span>  
+                                        </div><small > <b>(0 Review) </b></small>
+                                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.4em", "fontWeight": "800" }}>{findId.price} </p>
+                                        <p> <i className="fa fa-circle" style={{ fontSize: "0.8em", color: "green", marginRight: "5px" }}></i> 2 in stock</p>
+                                        
+                                        <div role="tabpanel">
+                                            <ul className="nav nav-tabs" role="tablist">
+                                                <li role="presentation" className="active">
+                                                    <a href="#option" aria-controls="option"  data-toggle="tab">OPTION</a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#summary" aria-controls="summary" data-toggle="tab">SUMMARY</a>
+                                                </li>
+                                            </ul>
+                                        
+                                            <div className="tab-content">
+                                                <div role="tabpanel" className="tab-pane active" id="option">
+                                                    
+                                                    <form action="" method="POST" role="form" style={{padding:"5px 0px"}}>
+                                                       
+                                                        <div className="form-group">
+                                                            <p>Male Show Size <span style={{color: "#F5611D"}}>*</span></p>
+                                                            <select name="" className="form-control" style={{borderBottom:"1px solid lightgrey"}} >
+                                                                <option value="">Choose an option</option>
+                                                                <option value="">Choose an option</option>
+                                                                <option value="">Choose an option</option>                                                                
+                                                            </select>
+                                                            
+                                                        </div>
+                                                        <p><Link to={match.url} style={{ color: "#F5611D", fontWeight: "bold" }}>Size Guide </Link></p>
+                                                        <p> Quantity</p>
+                                                        <div className="input-group">
+                                                            <span className="input-group-btn">
+                                                                <button type="button" className="btn btn-default">
+                                                                    <i className="fa fa-minus"></i>
+                                                                </button>
+                                                            </span>
+                                                            
+                                                            <input type="number" className="form-control"  required="required" />
+                                                            
+                                                            <span className="input-group-btn">
+                                                                <button type="button" className="btn btn-default">
+                                                                <i className="fa fa-plus"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                        
+                                                        <button type="submit" className="btn btn-custom pull-right" style={{marginTop:"10px"}}>Add to cart</button>
+                                                    
+                                                    </form>
+                                                    
+                                                </div>
+                                                <div role="tabpanel" className="tab-pane" id="summary">
+                                                    summary not available at the moment please check back later
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                 </div>
+                             </div>
+                                
+                                
+                            </div>
+                            <div className="" style={{ background: "#fff", padding: "4% 4%",color:"#000" }} >
+                                
+                                <div className="row">
+                                    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <p>Description</p>
+                                        <p><b>Features:</b></p>
+                                        <p>Easy to clean and polish</p>
+                                        <p>comfortable sitting</p>
+                                        <p>Features</p>
+                                        <p>Easy to clean and polish</p>
+                                        <p>comfortable sitting</p>
+                                        <p>Features</p>
+                                        <p>Easy to clean and polish</p>
+                                        <p>comfortable sitting</p>
+
+                                    </div>
+                                    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                       
+                                        
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <div className="" style={{ background: "#fff",padding:"10%" }} >
+                            <p>Customer that also bought this</p>
+                            <hr />
+                            
+                            <img src="../../images/demo1_product20_208x208-300x300.jpg" width="100%" alt=""/>
+                            <i>Mayscloset</i>
+                            <p>Urban circle longsleeve...</p>
+
+                            <p  style={{ margin: "0px", color: "#F5611D", "fontSize": "1.4em", "fontWeight": "800" }}>$2,323 </p>                            
+                            <form action="" method="POST" role="form" style={{ padding: "5px 0px" }}>
+
+                                <div className="form-group">
+                                    <p>Male Show Size <span style={{ color: "#F5611D" }}>*</span></p>
+                                    <select name="" className="form-control" style={{ borderBottom: "1px solid lightgrey" }} >
+                                        <option value="">Choose an option</option>
+                                        <option value="">Choose an option</option>
+                                        <option value="">Choose an option</option>
+                                    </select>
+
+                                </div>
+                                <p><Link to={match.url} style={{ color: "#F5611D", fontWeight: "bold" }}>Size Guide </Link></p>
+                                <p> Quantity</p>
+                                <div className="input-group">
+                                    <span className="input-group-btn">
+                                        <button type="button" className="btn btn-default">
+                                            <i className="fa fa-minus"></i>
+                                        </button>
+                                    </span>
+
+                                    <input type="number" className="form-control" required="required" />
+
+                                    <span className="input-group-btn">
+                                        <button type="button" className="btn btn-default">
+                                            <i className="fa fa-plus"></i>
+                                        </button>
+                                    </span>
+                                </div>
+
+                                <button type="submit" className="btn btn-custom btn-block " style={{ marginTop: "10px" }}>
+                                <span>+</span> <i className="fa fa-shopping-cart"></i>
+                                </button>
+                                <div className="clearfix">
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+
         </div>
     );
 

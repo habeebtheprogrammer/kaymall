@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Itemcard from './itemcard';
 import Store from './data';
 import Locationbar from './locationbar';
 const Listitem = ({match})=>{
-    var finditem = Store.items.find((item)=>(match.params.title == item.category.url));
+    var finditem = Store.items.find((item)=>(match.params.title === item.category.url));
     var items = finditem.products.map((item)=>(
-        <Itemcard {...item} match={match}/>
+        <Itemcard {...item} key={item.id} match={match}/>
     ));
    return (<div>
        <Locationbar match={match} />       

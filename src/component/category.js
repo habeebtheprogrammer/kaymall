@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Store from './data'
 import Categorycard from './categorycard'
 import Locationbar from './locationbar';
