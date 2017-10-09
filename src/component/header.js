@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 class Header extends Component {
     render() {
+        var rand = Math.random() +1 
+        console.log(rand)
         var img = window.location.pathname ==='/'? 
             <img src="../images/we-are-3-banner-2400x480-2.jpg" width="100%" className="img-responsive" alt=""/>:null;
+        var img2 = window.location.pathname !== '/' ? 
+            <img src="../../images/home3_block1_banner-1.png" width="100%" className="img-responsive" alt="" /> : null;
         
         return (
             <div>
                 {img}
-                <nav className="navbar navbar-custom fixed-bar"  style={{padding:"0px 20px"}}>
+                {img2}
+                <nav className="navbar navbar-custom fixed-bar">
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                             <span className="sr-only">Toggle navigation</span>
@@ -27,9 +32,9 @@ class Header extends Component {
                 
                     <div className="collapse navbar-collapse navbar-ex1-collapse">
                         <ul className="nav navbar-nav">
-                            <li className="active"><Link  to="/category">Stores</Link></li>
+                            <li className=" hidden-sm"><Link  to="/category">Stores</Link></li>
                         </ul>
-                        <ul className="nav navbar-nav" style={{ marginLeft:"20%" }}>
+                        <ul className="nav navbar-nav middle-grid">
                             <li className=""><Link to="/category">Category</Link></li>
                             <li><Link to="/seller">Become a seller</Link></li>
                             <li className=""><Link to="/affliate">Affliate</Link></li>
@@ -39,7 +44,7 @@ class Header extends Component {
                             <li>
                                 <a href="/" className="cart-icon">
                                     <i className="fa fa-shopping-cart"></i>
-                                    <span>3</span>
+                                    <span className="addedItems">0</span>
                                 </a>
                             </li>
                             <li>

@@ -15,7 +15,7 @@ const Categorycard = ({category,banner,products,match})=>{
         <div className="category-group">
             <div className="row" style={{ background: "#fff", margin: "0px 0px 20px" }}>
                 
-                <div className="col-sm-2 col-xs-2 col-md-2 col-lg-2 zero" >
+                <div className="col-sm-2 hidden-xs zero" >
                     <div className="category-list">
                         <ul className="list-group" style={{marginBottom:"0px"}}>
                             <li className="list-group-item"><p className="group-title"> {subname}</p></li>
@@ -23,16 +23,15 @@ const Categorycard = ({category,banner,products,match})=>{
                             <li className="list-group-item"><Link to="/">Featured</Link></li>
                             <li className="list-group-item"><Link to="/">Promotion</Link></li>
                             <li className="list-group-item"><Link to="/">New Arrivals</Link></li>
-                            <li className="list-group-item"><Link to="/"><b> Shop by brands</b></Link></li>
-                            <li className="list-group-item"><Link to="/"><b>Shop by sellers</b></Link></li>
+                            <li className="list-group-item hidden-sm"><Link to="/"><b> Shop by brands</b></Link></li>
+                            <li className="list-group-item hidden-sm"><Link to="/"><b>Shop by sellers</b></Link></li>
                         </ul>
 
                     </div>
                 </div>
                 <Link to={`${path}/${category.url}`} >               
-                <div className=" col-xs-6 col-sm-6 col-md-6 col-lg-6 zero" style={{
-                     width: "41.65%"}}>
-                    <div className="bg-lg" style={{ height: "350px", overflow: "hidden"}}>
+                <div className="  col-sm-5 col-xs-6 zero" >
+                    <div className="bg-lg" style={{ overflow: "hidden"}}>
                         <div className="custom-overlay"></div>
                         <p className="show-title" style={{ color: "#fff",fontWeight:"bold",textTransform:"capitalize", padding:"30% 35%",textAlign:"center", position: "absolute", fontSize: "1.4em" }} > {category.name}</p>                        
                         
@@ -40,28 +39,34 @@ const Categorycard = ({category,banner,products,match})=>{
                         
                     </div>
                 </div>
-                <div className="col-sm-2 col-xs-2 col-md-2 col-lg-2 zero" style={{ width: "20.825%" }}>
-                    <div className="bg-sm" style={{ height: "175px" }}>
-                        <div className="custom-overlay"></div>
+                <div div className="col-sm-5 col-xs-6 zero">
+                    <div className="bg-sm " style={{ width:"50%",position:"relative",float:"left" }}>
+                        <div className="custom-overlay" ></div>
+                        <img src={`./images/${banner.url}`} className="" width="100%" alt="" />
+                        <div className="left-cut"></div>
+                    </div>
+                    <div className="bg-sm" style={{ width: "50%", float: "left", position: "relative" }}>
+                        <p className="hover-title left-cut" style={{}} > {category.name}</p>
+
+                    </div>
+                    <div className="bg-sm" style={{width: "50%", float: "left", position: "relative" }}>
+                        <p className="hover-title" style={{}} > {category.name}</p>
+
+                    </div>
+                    <div className="bg-sm" style={{  width: "50%", float: "left", position: "relative" }}>
+                        <div className="custom-overlay" ></div>
                         <img src={`./images/${banner.url}`} width="100%" alt="" />
+                        <div className="right-cut"></div>
                     </div>
-                    <div className="bg-sm" style={{ height: "175px" }}>
-                            <p className="hover-title left-cut" style={{}} > {category.name}</p>
-                    </div>
+                    
+                    <div className="clearfix"> </div>
+                    
                 </div>
-                <div className="col-sm-2 col-md-2  col-xs-2 col-lg-2 zero" style={{ width: "20.825%" }}>
-                        <div className="bg-sm" style={{ height: "175px" }}>
-                        <p className="hover-title right-cut" style={{}} > {category.name}</p>
-                    </div>
-                        <div className="bg-sm" style={{ height: "175px" }}>
-                        <div className="custom-overlay"></div>
-                        <img src={`./images/${banner.url}`} width="100%" alt="" />
-                    </div>
-                </div>
+  
                 </Link>
             </div>
             
-            <div id="brand-carousel" className="carousel slide" data-ride="carousel" style={{margin:"0px 0px 20px"}}>
+            <div id="brand-carousel" className="carousel slide hidden-xs" data-ride="carousel" style={{margin:"0px 0px 20px"}}>
                 <ol className="carousel-indicators">
                     <li data-target="#brand-carousel" data-slide-to="0" className=""></li>
                     <li data-target="#brand-carousel" data-slide-to="1" className=""></li>

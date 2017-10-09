@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Categorycard from './categorycard'
 import Store from './data'
+
 class Home extends Component {
  
     render() {
@@ -10,24 +11,24 @@ class Home extends Component {
 
         return (
             <div className="">
-         
                 
-                <div className="container">
+                
+                <div className="container policy">
                     
-                    <div className="row" style={{margin:"20px 0px 20px",fontSize:"0.9em",color:"#aaa"}}>
-                        <div className="col-sm-4 col-md-4 col-lg-4">
+                    <div className="row " style={{fontSize:"0.9em",color:"#aaa"}}>
+                        <div className="col-sm-4 zero">
                         
-                        <i className="fa fa-ship" style={{marginRight:"5%"}}></i>
-                        Free Shipping to selected locations.
+                        <i className="fa fa-ship" ></i>
+                        <span> Free Shipping to selected locations.</span>
                         </div>
-                        <div className="col-sm-4 col-md-4 col-lg-4">
-                            <i className="fa fa-car" style={{ marginRight: "5%" }}></i>
-                            Nationwide Delivery and same day dispatch.
+                        <div className="col-sm-4 zero">
+                            <center>    <i className="fa fa-car" ></i>
+                          <span> Nationwide Delivery and dispatch</span></center>
                         </div>
-                        <div className="col-sm-4 col-md-4 col-lg-4">
-                            <div className="">
-                            <i className="fa fa-diamond" style={{ marginRight: "5%" }}></i>
-                            Receive Gifts when you subscribe.
+                        <div className="col-sm-4 zero">
+                            <div className="pull-right">
+                            <i className="fa fa-diamond"></i>
+                            <span> Receive Gifts when you subscribe.</span>
                             </div>
                         </div>
 

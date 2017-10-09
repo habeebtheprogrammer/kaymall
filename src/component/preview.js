@@ -5,6 +5,15 @@ import Locationbar from './locationbar';
 import Carousel from './carousel';
 
 const Preview = ({ match }) => {
+        var addToCart = (e)=>{
+            var node = document.getElementsByClassName('addedItems');
+            var num = node[0].innerHTML;
+            num= parseInt(num);
+            num  += 1;
+            node[0].innerHTML = num;
+            alert("added successfully");    
+        }
+
         for(var i=0;i<Store.items.length; i++)
         {
             var findId = Store.items[i].products.find((item)=>{
@@ -18,16 +27,16 @@ const Preview = ({ match }) => {
             <Locationbar match={match} />
             <div className="container" >
                     <div className="row">
-                        <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                        <div className=" col-sm-9 " style={{marginBottom:"20px"}}>
                             <div className="" style={{ background: "#fff",padding:"4% 0%",marginBottom:"20px" }} >
                              
                              <div className="row">
-                                <div className="col-xs-7 col-sm-7 col-md-7 col-lg-7 " style={{ padding: "0% 10%" }}>
-                                    <div style={{ border: "1px solid lightgrey"}}>
+                                <div className="col-xs-7 full-xs col-sm-7 " style={{ padding: "0% 7%" }}>
+                                    <div style={{ border: "1px solid lightgrey",marginBottom:"5px"}}>
                                         <Carousel img1={findId.url} img2={findId.url} img3={findId.url}/>
                                     </div>
                                  </div>
-                                 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                 <div className="col-xs-4 full-xs col-sm-4 ">
                                     <div style={{ padding: "0% 1%" }}>
                                        <i> Sold by </i> 
                                        <i className="fa fa-user"></i>
@@ -85,7 +94,7 @@ const Preview = ({ match }) => {
                                                             </span>
                                                         </div>
                                                         
-                                                        <button type="submit" className="btn btn-custom pull-right" style={{marginTop:"10px"}}>Add to cart</button>
+                                                        <button type="submit" className="btn btn-custom pull-right" onClick={addToCart} style={{marginTop:"10px"}}>Add to cart</button>
                                                     
                                                     </form>
                                                     
@@ -106,7 +115,7 @@ const Preview = ({ match }) => {
                             <div className="" style={{ background: "#fff", padding: "4% 4%",color:"#000" }} >
                                 
                                 <div className="row">
-                                    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div className=" col-sm-6">
                                         <p>Description</p>
                                         <p><b>Features:</b></p>
                                         <p>Easy to clean and polish</p>
@@ -119,7 +128,7 @@ const Preview = ({ match }) => {
                                         <p>comfortable sitting</p>
 
                                     </div>
-                                    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div className=" col-sm-6 ">
                                        
                                         
                                     </div>
@@ -128,7 +137,7 @@ const Preview = ({ match }) => {
 
                             </div>
                         </div>
-                        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <div className="col-sm-3">
                         <div className="" style={{ background: "#fff",padding:"10%" }} >
                             <p>Customer that also bought this</p>
                             <hr />
@@ -167,7 +176,7 @@ const Preview = ({ match }) => {
                                     </span>
                                 </div>
 
-                                <button type="submit" className="btn btn-custom btn-block " style={{ marginTop: "10px" }}>
+                                <button type="submit" className="btn btn-custom btn-block" onClick={addToCart} style={{ marginTop: "10px" }}>
                                 <span>+</span> <i className="fa fa-shopping-cart"></i>
                                 </button>
                                 <div className="clearfix">

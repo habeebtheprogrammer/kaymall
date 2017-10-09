@@ -9,7 +9,7 @@ const Listitem = ({match})=>{
     ));
    return (<div>
        <Locationbar match={match} />       
-       <div className="container" style={{ padding: "0px 40px" }}>     
+       <div className="container" style={{}} >     
                     {items}
                     {items}
 

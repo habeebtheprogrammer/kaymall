@@ -8,7 +8,7 @@ const Category=({match})=> {
             return (<Categorycard {...item} match={match}/>)})
         return (
             <div>
-            <Locationbar {...match}/>
+            <Locationbar match = {match}/>
             <div className="container">
                 {List}
             </div>

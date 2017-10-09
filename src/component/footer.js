@@ -7,17 +7,17 @@ class Footer extends Component {
                 <div className="news-letter" >
 
                     <div className="row">
-                        <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                        <div className="col-sm-9 col-md-9 col-lg-9">
                             <p className="news-letter-title"> Newsletter Sign Up</p>
                             <p> Enter email address</p>
 
                             <form action="" method="POST" className="form-inline" style={{ margin: "1% 0px 2%" }} >
 
-                                <div className="form-group" style={{ width: "40%" }}>
+                                <div className="form-group">
                                     <label className="sr-only" >label</label>
                                     <input type="email" className="form-csontrol" id="" />
                                 </div>
-                                <button type="submit" className="btn">Subscribe</button>
+                                <button type="submit" className="btn btn-custom">Subscribe</button>
                             </form>
                             Subscribe to receive our latest deals, gifts, and more!
 

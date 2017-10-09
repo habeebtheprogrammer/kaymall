@@ -10,12 +10,11 @@ a:hover{
   color: #666;
 }
 
-.nav.navbar-nav a{
-  padding: 0px;
-  margin: 15px 10px;
-}
 .nav.navbar-nav a:hover{
   background: #fff;
+}
+.navbar{
+  margin-bottom: 0px;
 }
 .nav.navbar-nav a:focus{
   -webkit-transition: 0.2s ease-in  ;
@@ -65,31 +64,41 @@ a{
 }
 .navbar-brand {
   text-transform: uppercase;
-  /* letter-spacing: 1px; */
-  font-size: 1.1em;
+  font-size: 0.9em;
   color: #000;
   font-weight: 400; 
+ padding: 15px 10px;
+
 }
 .navbar-brand i{
   margin-right: 10px;
   color: #EE641A
 }
+nav .navbar-toggle {
+  margin-right:0px
+}
+.navbar-toggle .icon-bar{
+    width: 15px;
+    height: 1px;
+     background: #000000;
+     padding: 0px;
+     margin: 0px;
+}
+
 .search-bar{
    width: 100%;
    border: 0px;
     border-bottom: 1px solid #E6E6E6;
    min-Height:100px;
-   font-size: 1.8em;
+   font-size: 1em;
    padding: 2.4%;
    letter-spacing: 1px;
 }
 .navbar.navbar-custom{
-  margin: 0px;
+  padding: 0px;
   background: #Fff;
   border-right: none;
   border-left: none;
-  border-bottom: 1px solid #E6E6E6;
-
   border-radius: 0px;
   
 }
@@ -113,11 +122,6 @@ a{
   padding: 2% 6%;
   border-radius: 20px;
   margin: 2% 0px 0px;
-}
-.cat-title{
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #333;  
 }
 .group-title{
   padding: 20% 0px 0%;
@@ -143,7 +147,7 @@ a{
   padding: 3%;
 }
 .news-letter-title{
-  font-size: 1.7em;
+  font-size: 1.6em;
   color: #222;  
 }
 .news-letter input{
@@ -158,6 +162,10 @@ a{
   background: #EB6C27;
   color: #eee;
 }
+.btn-custom:hover,.btn-custom:focus,.btn-custom:active{
+  
+  color: #eee;
+}
 .custom-overlay{
   width: 100%; 
 }
@@ -165,16 +173,12 @@ a{
   display: none;
 }
 .bg-lg{
-  -webkit-transition: 0.2s ease-in  ;
-  -moz-transition: 0.2s ease-in  ;
-  transition: 0.2s ease-in  ;
+   height: 300px;
     }
 .bg-sm{
   width: 100%;
   overflow: hidden;
-  -webkit-transition: 0.2s ease-in  ;
-  -moz-transition: 0.2s ease-in  ;
-  transition: 0.2s ease-in  ;
+  height: 150px
 }
 
 .bg-lg:hover img{
@@ -183,12 +187,6 @@ a{
   -moz-transition: 0.2s ease-in  ;
   transition: 0.2s ease-in  ;
 }
-/* .bg-lg:hover .show-title{
-  display: block;
-  -webkit-transition: 0.6s ease-in  ;
-  -moz-transition: 0.6s ease-in  ;
-  transition: 0.6s ease-in  ;
-} */
 .bg-sm:hover img{
      width: 105%; 
   -webkit-transition: 0.2s ease-in  ;
@@ -209,14 +207,14 @@ a{
 .bg-sm:hover .custom-overlay{
     position: absolute;
   width: 100%;
-  height: 50%;
+  height: 100%;
   background: rgba(0,0,0, 0.3);
     -webkit-transition: 0.2s ease-in  ;
   -moz-transition: 0.2s ease-in  ;
   transition: 0.2s ease-in  ;
 }
 .hover-title{
-  padding:30%;
+  padding:30% 0px;
   color: #000;
   font-weight: bold;
   text-align: center;
@@ -228,7 +226,7 @@ a{
   border-width: 15px;
   position: absolute;
   left: 0;
-  bottom: 70px;
+  bottom: 35%;
   border-style: solid;
   border-color: transparent transparent transparent #fff;
 
@@ -238,7 +236,7 @@ a{
   border-width: 15px;
   position: absolute;
   right: 0;
-  top: 70px;
+  top: 35%;
   border-style: solid;
   border-color: transparent #fff transparent transparent
 
@@ -266,19 +264,14 @@ footer .navbar-nav a.dropdown-toggle  {
   font-family: sans-serif;
   color: #fff;
 }
-.item-card2{
-      font-size: 1em;
-    float:left;
-    width:50%;
-    padding: 0px 5px 5px;
-}
+
 .padding-20px{
   padding: 0px;
 }
 .item-card{
       font-size: 1em;
     float:left;
-    width:25%;
+    width:33.33%;
     padding: 0px 5px 5px;
 }
 .divider{
@@ -301,56 +294,87 @@ footer .navbar-nav a.dropdown-toggle  {
   border: none ;
   background: transparent;
 }
+.policy .row{
+  margin:20px 0px 20px
+}
+.policy .container{
+  padding: 0px;
+}
+.locationbar .nav li {
+  display: inline-block
+}
+.preview .container{
+  padding: 0px;
+}
 @media (min-width: 768px) {
 
-.x-container {
-    width: 100%;
-    margin: auto;
-  }
   .item-card{
+      font-size: 1em;
+    float:left;
+    width:33.33%;
+    padding: 0px 5px 5px;
+}
+.preview .container{
+  padding: 0px;
+}
+.search-bar{
+  font-size: 1.8em;
+}
+.policy .container{
+  padding: 0px;
+}
+.navbar.navbar-custom{
+  margin: 0px;
+  padding:0px 1%;  
+  border-radius: 0px;
+}
+
+
+.navbar-brand {
+  font-size: 1em;
+  padding: 15px 5px;
+}
+.padding-20px{
+  padding: 0px;
+}
+nav .middle-grid{
+   margin-left:0%;
+   -webkit-transition: 0.2s ease-in  ;
+   -moz-transition: 0.2s ease-in  ;
+   transition: 0.2s ease-in  ;
+}
+
+.container{
+  width: 100%;
+}
+
+}
+@media (min-width: 992px) {
+.bg-lg{
+   height: 350px;
+    }
+  
+.bg-sm{
+  height: 175px
+}
+  nav .middle-grid{
+   margin-left:12%
+}
+.item-card{
       font-size: 1em;
     float:left;
     width:20%;
     padding: 0px 5px 5px;
 }
-
-.padding-20px{
-  padding: 0px;
-}
-.item-card2{
-  height: auto;
-  width: 40%;
-  float: left;
-  height: 230px;
-  overflow: hidden;
-}
-
 .container{
   width: 100%;
 }
-}
-@media (min-width: 992px) {
 
-.x-container {
-    width: 100%;
-    margin: auto;
-  }
-.item-card{
-      font-size: 1em;
-    float:left;
-    width:14.285%;
-    padding: 0px 5px 5px;
-}
-.container{
-  width: 100%;
-}
 }
 @media (min-width: 1200px) {
-
-  .x-container {
-    width: 89%;
-    margin: auto;
-  }
+ nav .middle-grid{
+   margin-left:20%
+}
 .item-card{
       font-size: 1em;
     float:left;
@@ -358,25 +382,44 @@ footer .navbar-nav a.dropdown-toggle  {
     padding: 0px 10px 20px;
 }
 .container{
-  width: 86%;
+  width: 83%;
 }
-.item-card2{
-  width: 28.57%;
-  float: left;
+nav .middle-grid{
+   margin-left:20%
 }
+
 }
-@media (max-width: 468px) {
-  .item-card{
-    font-size: 0.86em;
-    width:50%;
+@media (max-width: 649px) {
+  *{
+    font-size: 0.99em
   }
+ .bg-lg{
+   height: 150px;
+    }
+  .category-group .col-xs-6{
+    width: 100%;
+  }
+.bg-sm{
+  height: 90px;
+  
+}
+.hover-title{
+  font-size: 1em;
+  font-weight: 600;
+  
+}
+.full-xs{
+  width: 100%;
  
-   .item-card2{
-    width:100%;
-    padding: 0px 0px;
-    margin: 5px 0px;
-  }
-.x-container{
-  padding: 0px;
 }
+.left-cut::after{
+  border-width: 10px;
+}
+.right-cut::after{
+  border-width: 10px;
+}
+.item-card{
+  width: 50%;
+}
+
 }
