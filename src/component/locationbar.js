@@ -38,7 +38,7 @@ var id = (match.path === "/category/:title/:id") ? <li>
             <div className="clearfix">
             </div>
         </div>
-        <style jsx>{`
+        <style >{`
             .locationbar ul li a{ padding-Left:0px}
             
             `}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Store from './data'
 import {Link} from 'react-router-dom'
 import Locationbar from './locationbar';
@@ -32,7 +32,7 @@ const Preview = ({ match }) => {
                              
                              <div className="row">
                                 <div className="col-xs-7 full-xs col-sm-7 " style={{ padding: "0% 7%" }}>
-                                    <div style={{ border: "1px solid lightgrey",marginBottom:"5px"}}>
+                                    <div style={{marginBottom:"5px"}}>
                                         <Carousel img1={findId.url} img2={findId.url} img3={findId.url}/>
                                     </div>
                                  </div>
@@ -41,7 +41,7 @@ const Preview = ({ match }) => {
                                        <i> Sold by </i> 
                                        <i className="fa fa-user"></i>
                                         <span> Omalicha </span>
-                                        <p style={{fontSize:"1.7em", color:"#000"}}>{match.params.id}</p>
+                                        <p style={{fontSize:"1.7em",marginBottom:"0px", color:"#000"}}>{match.params.id}</p>
                                         <div className="rating" style={{ color: "#faa819",display:"inline",fontSize:"1.3em"}}> 
                                             <span>☆</span>
                                             <span>☆</span>
@@ -49,8 +49,9 @@ const Preview = ({ match }) => {
                                             <span>☆</span>
                                             <span>☆</span>  
                                         </div><small > <b>(0 Review) </b></small>
-                                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.4em", "fontWeight": "800" }}>{findId.price} </p>
-                                        <p> <i className="fa fa-circle" style={{ fontSize: "0.8em", color: "green", marginRight: "5px" }}></i> 2 in stock</p>
+                                        <div style={{marginBottom:"15px"}}></div>
+                                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.3em", "fontWeight": "800" }}>{findId.price}</p> <s>{findId.slash}</s>
+                                        <p> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "5px" }}></i> 2 in stock</p>
                                         
                                         <div role="tabpanel">
                                             <ul className="nav nav-tabs" role="tablist">
@@ -65,7 +66,7 @@ const Preview = ({ match }) => {
                                             <div className="tab-content">
                                                 <div role="tabpanel" className="tab-pane active" id="option">
                                                     
-                                                    <form action="" method="POST" role="form" style={{padding:"5px 0px"}}>
+                                                    <form action="" method="POST"  style={{padding:"5px 0px"}}>
                                                        
                                                         <div className="form-group">
                                                             <p>Male Show Size <span style={{color: "#F5611D"}}>*</span></p>
@@ -147,7 +148,7 @@ const Preview = ({ match }) => {
                             <p>Urban circle longsleeve...</p>
 
                             <p  style={{ margin: "0px", color: "#F5611D", "fontSize": "1.4em", "fontWeight": "800" }}>$2,323 </p>                            
-                            <form action="" method="POST" role="form" style={{ padding: "5px 0px" }}>
+                            <form action="" method="POST"  style={{ padding: "5px 0px" }}>
 
                                 <div className="form-group">
                                     <p>Male Show Size <span style={{ color: "#F5611D" }}>*</span></p>

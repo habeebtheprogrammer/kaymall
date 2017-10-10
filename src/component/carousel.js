@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Carousel = ({img1,img2,img3})=>(
     <div id="first-carousel" className="carousel slide" data-ride="carousel">

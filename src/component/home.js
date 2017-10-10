@@ -6,7 +6,7 @@ class Home extends Component {
  
     render() {
             var List = Store.items.map((item) => {
-                return (<Categorycard {...item} />)
+                return (<Categorycard key={item.id}{...item} />)
             })
 
         return (
@@ -15,21 +15,19 @@ class Home extends Component {
                 
                 <div className="container policy">
                     
-                    <div className="row " style={{fontSize:"0.9em",color:"#aaa"}}>
+                    <div className="row " style={{fontSize:"0.8em",color:"#aaa", textAlign:"center"}}>
                         <div className="col-sm-4 zero">
                         
-                        <i className="fa fa-ship" ></i>
+                        <i className="fa fa-ship" style={{marginRight:"5px",color:"#ccc"}}></i>
                         <span> Free Shipping to selected locations.</span>
                         </div>
                         <div className="col-sm-4 zero">
-                            <center>    <i className="fa fa-car" ></i>
-                          <span> Nationwide Delivery and dispatch</span></center>
+                            <i className="fa fa-car" style={{ marginRight: "5px", color: "#ccc" }}></i>
+                          <span> Nationwide Delivery and dispatch</span>
                         </div>
                         <div className="col-sm-4 zero">
-                            <div className="pull-right">
-                            <i className="fa fa-diamond"></i>
+                            <i className="fa fa-diamond" style={{ marginRight: "5px", color: "#ccc" }}></i>
                             <span> Receive Gifts when you subscribe.</span>
-                            </div>
                         </div>
 
                     </div>

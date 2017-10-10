@@ -5,7 +5,7 @@ import Locationbar from './locationbar';
 
 const Category=({match})=> {
         var List = Store.items.map((item) => {
-            return (<Categorycard {...item} match={match}/>)})
+            return (<Categorycard key={item.id} {...item} match={match}/>)})
         return (
             <div>
             <Locationbar match = {match}/>

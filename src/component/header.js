@@ -10,7 +10,7 @@ class Header extends Component {
             <img src="../../images/home3_block1_banner-1.png" width="100%" className="img-responsive" alt="" /> : null;
         
         return (
-            <div>
+            <div className="header">
                 {img}
                 {img2}
                 <nav className="navbar navbar-custom fixed-bar">
@@ -53,17 +53,9 @@ class Header extends Component {
                                     <span>3</span>
                                 </a>
                             </li>
-                            <li className="dropdown">
-                                <a href="/" className="dropdown-toggle" data-toggle="dropdown">
-                                    
-                                    
-                                    Login/Sign up <b className="caret"></b></a>
-                                <ul className="dropdown-menu">
-                                    <li><a href="/">Action</a></li>
-                                    <li><a href="/">Another action</a></li>
-                                    <li><a href="/">Something else here</a></li>
-                                    <li><a href="/">Separated link</a></li>
-                                </ul>
+                            <li className="">
+                                <Link to="/login">
+                                    Login/Sign up</Link>
                             </li>
                         </ul>
                     </div>

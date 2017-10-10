@@ -1,5 +1,4 @@
 import React  from 'react';
-import {Link} from 'react-router-dom';
 
 
 const Itemcard = ({ url, price, slash, discount, title,match })=>
@@ -16,14 +15,15 @@ const Itemcard = ({ url, price, slash, discount, title,match })=>
                 
                 <div style={{"position":"relative",background:"#fff"}}>
                     <div className="discount1" style={{ "position": "absolute",  }}><b>{discount} </b></div>
-                    
-                    <img src={`../images/${url}`} width="99%" alt={title}/>
-                    
-                <div className="anchor"style={{"padding": "0px 10px 10px" }}><hr style={{margin:"5px 0px 20px"}}/>
+                    <center>
+                    <img src={`../images/${url}`} width="80%" alt={title}/>
+                    </center><hr style={{ margin: "5px 0px 20px" }} />
+                <div className="anchor"style={{"padding": "0px 10px 10px" }}>
                    <a href={`${match.url}/${title}`} style={{"textDecoration":"none"}}>
                         
                             <b style={{ textTransform: "capitalize", fontSize: "1em"}}> {subtitle}</b>
                         {/* <b>{title}</b> */}
+                        <p className="pull-right"> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
                         
                         <h4 style={{margin:"0px",color:"#ccc"}}><b><s>{slash}</s></b></h4>
                         <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.4em", "fontWeight": "bold" }}>{price} </p>

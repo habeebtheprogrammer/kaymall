@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 
 const Categorycard = ({category,banner,products,match})=>{
     var path = (match === undefined) ? 'category':match.url;
-    var sub = products.filter((item,index)=>(index < 4))
     if (category.name.length > 10) {
         var subname = category.name.substr(0, 10);
         subname += "..."
@@ -35,14 +34,14 @@ const Categorycard = ({category,banner,products,match})=>{
                         <div className="custom-overlay"></div>
                         <p className="show-title" style={{ color: "#fff",fontWeight:"bold",textTransform:"capitalize", padding:"30% 35%",textAlign:"center", position: "absolute", fontSize: "1.4em" }} > {category.name}</p>                        
                         
-                        <img src={`./images/${banner.url}`} width="100%"  alt="" />
+                        <img src={`./images/${banner.url}`} width="180%"  alt="" />
                         
                     </div>
                 </div>
-                <div div className="col-sm-5 col-xs-6 zero">
+                <div  className="col-sm-5 col-xs-6 zero">
                     <div className="bg-sm " style={{ width:"50%",position:"relative",float:"left" }}>
                         <div className="custom-overlay" ></div>
-                        <img src={`./images/${banner.url}`} className="" width="100%" alt="" />
+                        <img src={`./images/${banner.url}`} className="" width="200%" alt="" />
                         <div className="left-cut"></div>
                     </div>
                     <div className="bg-sm" style={{ width: "50%", float: "left", position: "relative" }}>
@@ -55,7 +54,7 @@ const Categorycard = ({category,banner,products,match})=>{
                     </div>
                     <div className="bg-sm" style={{  width: "50%", float: "left", position: "relative" }}>
                         <div className="custom-overlay" ></div>
-                        <img src={`./images/${banner.url}`} width="100%" alt="" />
+                        <img src={`./images/${banner.url}`} width="200%" alt="" />
                         <div className="right-cut"></div>
                     </div>
                     
@@ -66,36 +65,24 @@ const Categorycard = ({category,banner,products,match})=>{
                 </Link>
             </div>
             
-            <div id="brand-carousel" className="carousel slide hidden-xs" data-ride="carousel" style={{margin:"0px 0px 20px"}}>
-                <ol className="carousel-indicators">
-                    <li data-target="#brand-carousel" data-slide-to="0" className=""></li>
-                    <li data-target="#brand-carousel" data-slide-to="1" className=""></li>
-                    <li data-target="#brand-carousel" data-slide-to="2" className="active"></li>
-                </ol>
+            <div id="brand-carousel" className="carousel slide " data-ride="carousel" style={{margin:"0px 0px 20px"}}>
+              
                 <div className="carousel-inner">
                     <div className="item">
                         <div className="clearfix">
-                            <ul className="nav navbar-nav">
-                                <li className="active">
-                                    <Link to="/">Home</Link>
+                            <ul className="nav navbar-nav navbar-right">
+                              
+                                <li>
+                                    <Link to="/">Adidas</Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Link</Link>
+                                    <Link to="/">Calvin Klein</Link>
                                 </li>
                                 <li >
-                                    <Link to="/">Home</Link>
+                                    <Link to="/">Arrow</Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Link</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Link</Link>
-                                </li>
-                                <li >
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Link</Link>
+                                    <Link to="/">Puma</Link>
                                 </li>
                             </ul>
                         </div>
@@ -103,54 +90,40 @@ const Categorycard = ({category,banner,products,match})=>{
                     </div>
                     <div className="item">
                         <div className="clearfix">
-                            <ul className="nav navbar-nav">
-                                <li className="active">
-                                    <Link to="/">Home</Link>
+                            <ul className="nav navbar-nav navbar-right">
+                              
+
+                                <li>
+                                    <Link to="/">Nike</Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Link</Link>
+                                    <Link to="/">Ralph Lauren</Link>
                                 </li>
                                 <li >
-                                    <Link to="/">Home</Link>
+                                    <Link to="/">Gucci</Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Link</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Link</Link>
-                                </li>
-                                <li >
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Link</Link>
+                                    <Link to="/">Ionic</Link>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="item active">
                         <div className="clearfix">
-                            <ul className="nav navbar-nav">
-                                <li className="active">
-                                    <Link to="/">Home</Link>
+                            <ul className="nav navbar-nav navbar-right">
+                               
+
+                                <li>
+                                    <Link to="/">Adidas</Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Link</Link>
+                                    <Link to="/">Calvin Klein</Link>
                                 </li>
                                 <li >
-                                    <Link to="/">Home</Link>
+                                    <Link to="/">Arrow</Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Link</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Link</Link>
-                                </li>
-                                <li >
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Link</Link>
+                                    <Link to="/">Puma</Link>
                                 </li>
                             </ul>
                         </div>

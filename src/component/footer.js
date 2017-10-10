@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,{Component}  from 'react';
 
 class Footer extends Component {
     render() {
@@ -7,7 +7,7 @@ class Footer extends Component {
                 <div className="news-letter" >
 
                     <div className="row">
-                        <div className="col-sm-9 col-md-9 col-lg-9">
+                        <div className="col-sm-8">
                             <p className="news-letter-title"> Newsletter Sign Up</p>
                             <p> Enter email address</p>
 
@@ -15,7 +15,7 @@ class Footer extends Component {
 
                                 <div className="form-group">
                                     <label className="sr-only" >label</label>
-                                    <input type="email" className="form-csontrol" id="" />
+                                    <input type="email" className="" id="" />
                                 </div>
                                 <button type="submit" className="btn btn-custom">Subscribe</button>
                             </form>
@@ -23,8 +23,14 @@ class Footer extends Component {
 
                             </div>
 
-                        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-
+                        <div className=" col-sm-4">
+                            <img src="../../images/13259592_1112453678775302_886337791_n.jpg" className="img-responsive" width="33.33%" alt="img" />
+                            <img src="../../images/13188071_179262262469766_1360625646_n.jpg" width="33.33%" className="img-responsive" alt="img" />
+                            <img src="../../images/13183277_104298359987185_2059583378_n.jpg" width="33.33%" className="img-responsive" alt="img" />
+                            <img src="../../images/13108718_208973229495538_1638819115_n.jpg" width="33.33%" className="img-responsive" alt="img" />
+                            <img src="../../images/13188151_728427913966056_999471776_n.jpg" width="33.33%" className="img-responsive" alt="img" />
+                            <img src="../../images/13259545_301677243497535_1189638748_n.jpg" width="33.33%" className="img-responsive" alt="img"/>
+                            
                         </div>
 
                     </div>
@@ -48,6 +54,7 @@ class Footer extends Component {
                         </li>
                     </ul>
                 </div>
+                df
             </footer>
         );
     }
