@@ -37,32 +37,37 @@ const Categorycard = ({category,banner,products,match})=>{
                         <img src={`./images/${banner.url}`} width="180%"  alt="" />
                         
                     </div>
-                </div>
+                </div></Link>
+                
                 <div  className="col-sm-5 col-xs-6 zero">
+                    <Link to={`${path}/${category.url}`} >     
                     <div className="bg-sm " style={{ width:"50%",position:"relative",float:"left" }}>
                         <div className="custom-overlay" ></div>
                         <img src={`./images/${banner.url}`} className="" width="200%" alt="" />
                         <div className="left-cut"></div>
-                    </div>
+                    </div></Link>
+                    <Link to={`${path}/${category.url}`} >     
                     <div className="bg-sm" style={{ width: "50%", float: "left", position: "relative" }}>
                         <p className="hover-title left-cut" style={{}} > {category.name}</p>
 
-                    </div>
+                    </div></Link>
+                    <Link to={`${path}/${category.url}`} >     
                     <div className="bg-sm" style={{width: "50%", float: "left", position: "relative" }}>
                         <p className="hover-title" style={{}} > {category.name}</p>
 
-                    </div>
+                    </div></Link>
+                    <Link to={`${path}/${category.url}`} >     
                     <div className="bg-sm" style={{  width: "50%", float: "left", position: "relative" }}>
                         <div className="custom-overlay" ></div>
                         <img src={`./images/${banner.url}`} width="200%" alt="" />
                         <div className="right-cut"></div>
                     </div>
+                    </Link>
                     
                     <div className="clearfix"> </div>
                     
                 </div>
   
-                </Link>
             </div>
             
             <div id="brand-carousel" className="carousel slide " data-ride="carousel" style={{margin:"0px 0px 20px"}}>

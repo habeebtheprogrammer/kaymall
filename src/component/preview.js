@@ -16,12 +16,12 @@ const Preview = ({ match }) => {
 
         for(var i=0;i<Store.items.length; i++)
         {
-            var findId = Store.items[i].products.find((item)=>{
+            var findId = Store.items[i].products.filter((item)=>{
                 return (item.title === match.params.id)});
-           if(findId !== undefined)  break;          
+           if(findId[0] !== undefined)  break;          
                 
          }
-         if(findId === undefined) return <Locationbar match={match} />
+         if(findId[0] === undefined) return <Locationbar match={match} />
     return (
         <div className="preview">
             <Locationbar match={match} />
@@ -33,7 +33,7 @@ const Preview = ({ match }) => {
                              <div className="row">
                                 <div className="col-xs-7 full-xs col-sm-7 " style={{ padding: "0% 7%" }}>
                                     <div style={{marginBottom:"5px"}}>
-                                        <Carousel img1={findId.url} img2={findId.url} img3={findId.url}/>
+                                        <Carousel img1={findId[0].url} img2={findId[0].url} img3={findId[0].url}/>
                                     </div>
                                  </div>
                                  <div className="col-xs-4 full-xs col-sm-4 ">
@@ -50,7 +50,7 @@ const Preview = ({ match }) => {
                                             <span>☆</span>  
                                         </div><small > <b>(0 Review) </b></small>
                                         <div style={{marginBottom:"15px"}}></div>
-                                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.3em", "fontWeight": "800" }}>{findId.price}</p> <s>{findId.slash}</s>
+                                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.3em", "fontWeight": "800" }}>{findId[0].price}</p> <s>{findId[0].slash}</s>
                                         <p> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "5px" }}></i> 2 in stock</p>
                                         
                                         <div role="tabpanel">

@@ -70,7 +70,7 @@ a{
 }
 .navbar-brand {
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #000;
   font-weight: 400; 
  padding: 15px 10px;
@@ -271,6 +271,9 @@ footer .fixed-bottom{
   
   right: 20px;
 }
+.item-price{
+  margin: 0px; color: #F5611D; font-size: 1.4em; font-weight: bold;
+}
 footer .navbar-nav a.dropdown-toggle  {
   padding: 10px 15px;
   font-size: 1.1em;
@@ -438,9 +441,18 @@ nav .middle-grid{
   margin: 0px;
 }
 #brand-carousel .nav li a{
-  padding: 10px 20px;
+  padding:0px;
   font-size: 0.8em;
   color: #C0C0C0;
   float: left;
+}
+footer{
+  font-size: 0.8em;
+}
+.item-card{
+  width: 100%;
+  font-size: 0.8em;
+}
+.slash,.item-price{
 }
 }

@@ -25,8 +25,8 @@ const Itemcard = ({ url, price, slash, discount, title,match })=>
                         {/* <b>{title}</b> */}
                         <p className="pull-right"> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
                         
-                        <h4 style={{margin:"0px",color:"#ccc"}}><b><s>{slash}</s></b></h4>
-                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.4em", "fontWeight": "bold" }}>{price} </p>
+                        <p className="slash" style={{margin:"0px",color:"#ccc"}}><b><s>{slash}</s></b></p>
+                        <p className="item-price" style={{  }}>{price} </p>
                         <p style={{"margin":"0px"}}>
                         <b>Dolce n Gabbana</b>
 

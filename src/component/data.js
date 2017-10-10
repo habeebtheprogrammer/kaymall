@@ -48,7 +48,7 @@ const Store = {
             { id: uuid.v4(), url: "demo1_product10_208x208-1-300x300.jpg", title: "Lorema ipsum dolor dipisicing elit.", price: "$402", discount: "-2%", slash: "$320" }]
         },
            {  id: uuid.v4(),
-                category: {name:"Accessories", url:"saccessories"},
+                category: {name:"Accessories", url:"accessories"},
                 banner: { url: "home_kitchen_large.png"},
                 products: [{ id: uuid.v4(), url: "other-6485-7077231-1-product.jpg", title: "Lorem ipsum adipisicing elit.", price: "$43,232", discount: "-32%", slash: "$24,320" },
                 { id: uuid.v4(),  url: "other-2454-770172-1-product.jpg", title: "ameet consectetur adipisicing elit.", price: "$402", discount: "-2%", slash: "$320" },
