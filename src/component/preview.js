@@ -5,14 +5,6 @@ import Locationbar from './locationbar';
 import Carousel from './carousel';
 
 const Preview = ({ match }) => {
-        var addToCart = (e)=>{
-            var node = document.getElementsByClassName('addedItems');
-            var num = node[0].innerHTML;
-            num= parseInt(num);
-            num  += 1;
-            node[0].innerHTML = num;
-            alert("added successfully");    
-        }
 
         for(var i=0;i<Store.items.length; i++)
         {
@@ -21,7 +13,7 @@ const Preview = ({ match }) => {
            if(findId[0] !== undefined)  break;          
                 
          }
-         if(findId[0] === undefined) return <Locationbar match={match} />
+         if(findId[0] === undefined) return (<Locationbar match={match} />)
     return (
         <div className="preview">
             <Locationbar match={match} />
@@ -66,7 +58,6 @@ const Preview = ({ match }) => {
                                             <div className="tab-content">
                                                 <div role="tabpanel" className="tab-pane active" id="option">
                                                     
-                                                    <form action="" method="POST"  style={{padding:"5px 0px"}}>
                                                        
                                                         <div className="form-group">
                                                             <p>Male Show Size <span style={{color: "#F5611D"}}>*</span></p>
@@ -86,7 +77,7 @@ const Preview = ({ match }) => {
                                                                 </button>
                                                             </span>
                                                             
-                                                            <input type="number" className="form-control"  required="required" />
+                                                            <input type="number" className="form-control"  value="1" required="required" />
                                                             
                                                             <span className="input-group-btn">
                                                                 <button type="button" className="btn btn-default">
@@ -95,9 +86,8 @@ const Preview = ({ match }) => {
                                                             </span>
                                                         </div>
                                                         
-                                                        <button type="submit" className="btn btn-custom pull-right" onClick={addToCart} style={{marginTop:"10px"}}>Add to cart</button>
+                                                        <button type="submit" className="btn btn-custom pull-right addToCart" data-toggle="modal" href='#added-success' style={{marginTop:"10px"}}>Add to cart</button>
                                                     
-                                                    </form>
                                                     
                                                 </div>
                                                 <div role="tabpanel" className="tab-pane" id="summary">
@@ -148,8 +138,7 @@ const Preview = ({ match }) => {
                             <p>Urban circle longsleeve...</p>
 
                             <p  style={{ margin: "0px", color: "#F5611D", "fontSize": "1.4em", "fontWeight": "800" }}>$2,323 </p>                            
-                            <form action="" method="POST"  style={{ padding: "5px 0px" }}>
-
+                           
                                 <div className="form-group">
                                     <p>Male Show Size <span style={{ color: "#F5611D" }}>*</span></p>
                                     <select name="" className="form-control" style={{ borderBottom: "1px solid lightgrey" }} >
@@ -168,21 +157,20 @@ const Preview = ({ match }) => {
                                         </button>
                                     </span>
 
-                                    <input type="number" className="form-control" required="required" />
+                                    <input type="number" className="form-control" value="1" required="required" />
 
                                     <span className="input-group-btn">
-                                        <button type="button" className="btn btn-default">
+                                        <button type="button" className="btn btn-default" >
                                             <i className="fa fa-plus"></i>
                                         </button>
                                     </span>
                                 </div>
 
-                                <button type="submit" className="btn btn-custom btn-block" onClick={addToCart} style={{ marginTop: "10px" }}>
+                                <button  className="btn btn-custom btn-block"  data-toggle="modal" href='#added-success'  style={{ marginTop: "10px" }}>
                                 <span>+</span> <i className="fa fa-shopping-cart"></i>
                                 </button>
                                 <div className="clearfix">
                                 </div>
-                            </form>
                         </div>
                         </div>
                     </div>

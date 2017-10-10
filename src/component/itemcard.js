@@ -36,7 +36,7 @@ const Itemcard = ({ url, price, slash, discount, title,match })=>
                     </a>
 
 
-                   <button type="button" style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", fontSize: "0.7em",right:"10px", bottom:"15px",   position:"absolute", padding: "4px 15px" }} className="btn  ">BUY</button>
+                   <button type="button" style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", fontSize: "0.7em",right:"10px", bottom:"15px",   position:"absolute", padding: "4px 15px" }} className="btn ">BUY</button>
 
 
                     </div>
