@@ -12,7 +12,6 @@ class Home extends Component {
         return (
             <div className="">
                 
-                
                 <div className="container policy">
                     
                     <div className="row " style={{fontSize:"0.8em",color:"#aaa", textAlign:"center"}}>

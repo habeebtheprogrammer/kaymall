@@ -67,13 +67,13 @@ class Header extends Component {
                     
             
                 </div>
-                <div className="hidden-lg hidden-sm hidden-md" style={{ background:"#f16439",color:"#fff",fontSize:"0.8em",padding:"10px 0px 10px 20px"}}>
+                <div className="hidden-lg hidden-sm hidden-md" style={{ background:"#f16439",color:"#fff",fontSize:"0.9em",padding:"20px 0px 20px 20px"}}>
                     <div className="row">
-                        <div className="col-xs-6 ">
+                        <div className="col-xs-8 ">
                             <span>Home market store find it for free on Google Play</span>
                         </div>
-                        <div className="col-xs-6 ">
-                            <a className="btn btn-default " style={{ fontSize: "0.8em",background:"transparent",border:"2px solid #fff",borderRadius:"0px",padding:"5px 15px",color:"#fff"}}href="/" role="button">
+                        <div className="col-xs-4 ">
+                            <a className="btn btn-default " style={{ fontSize: "0.9em",background:"transparent",border:"2px solid #fff",borderRadius:"0px",padding:"5px 15px",color:"#fff"}}href="/" role="button">
                                 <span> GET</span></a>
                         </div>
                     </div>
