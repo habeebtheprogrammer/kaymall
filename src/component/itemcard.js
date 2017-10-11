@@ -14,21 +14,21 @@ const Itemcard = ({ url, price, slash, discount, title,match })=>
             <div className="item-card" >
                 
                 <div style={{"position":"relative",background:"#fff"}}>
-                    <div className="discount1" style={{ "position": "absolute",  }}><b>{discount} </b></div>
+                    <div className="discount1" style={{ "position": "absolute",  }}>{discount} </div>
                     <center>
-                    <img src={`../images/${url}`} width="80%" alt={title}/>
+                    <img src={`../images/${url}`} className="item-img" alt={title}/>
                     </center><hr style={{ margin: "5px 0px 20px" }} />
                 <div className="anchor"style={{"padding": "0px 10px 10px" }}>
                    <a href={`${match.url}/${title}`} style={{"textDecoration":"none"}}>
                         
-                            <b style={{ textTransform: "capitalize", fontSize: "1em"}}> {subtitle}</b>
+                            <p style={{ textTransform: "capitalize", fontSize: "1em"}}> {subtitle}</p>
                         {/* <b>{title}</b> */}
                         <p className="pull-right"> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
                         
-                        <p className="slash" style={{margin:"0px",color:"#ccc"}}><b><s>{slash}</s></b></p>
+                        <p className="slash" style={{margin:"0px",color:"#ccc"}}><s>{slash}</s></p>
                         <p className="item-price" style={{  }}>{price} </p>
                         <p style={{"margin":"0px"}}>
-                        <b>Dolce n Gabbana</b>
+                        Dolce n Gabbana
 
                             </p>
                        

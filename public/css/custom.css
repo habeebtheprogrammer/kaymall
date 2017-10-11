@@ -47,7 +47,7 @@ a:hover{
   border-radius: 20px; color: #F7F7F7; padding: 2px 15px;
   margin-top: 19px;
   right: 20px;
-  font-size: 0.8em;
+  font-size:1em;
 }
 .item-card:hover  .discount1{
   background:#f16439;
@@ -97,7 +97,6 @@ nav .navbar-toggle {
    border: 0px;
     border-bottom: 1px solid #E6E6E6;
    min-Height:70px;
-   font-size: 0.8em;
    padding: 2.4%;
    letter-spacing: 1px;
 }
@@ -305,6 +304,9 @@ footer .navbar-nav a.dropdown-toggle  {
     width:33.33%;
     padding: 0px 5px 5px;
 }
+.item-img{
+  width: 80%
+}
 .divider{
   border-bottom: 1px solid lightgrey;
   height: 1px;
@@ -429,7 +431,7 @@ nav .middle-grid{
 @media (max-width: 649px) {
 
  .bg-lg{
-   height: 220px;
+   height: 250px;
     }
   .category-group .col-xs-6{
     width: 100%;
@@ -440,7 +442,8 @@ nav .middle-grid{
 }
 ::-webkit-input-placeholder{
   color: #bbb;
-  font-size: 0.8em;
+  opacity: 1
+
 }
 .hover-title{
   font-size: 0.8em;
@@ -464,25 +467,26 @@ nav .middle-grid{
 }
 #brand-carousel .nav li a{
   padding:0px;
-  font-size: 0.8em;
+  font-size: 1em;
   color: #C0C0C0;
   float: left;
 }
-footer{
-  font-size: 0.8em;
-}
 .item-card{
   width: 100%;
-  font-size: 0.8em;
+  font-size: 1em;
+  margin: 0px 0px 10px;
 }
 .navbar-brand{
   height: 0px;
-  padding:10px;
+  padding:8px 10px;
   font-size: 1em;
 }
 button.navbar-toggle{
   padding: 4px 10px
 }.navbar{
   min-height: 0px;
+}
+.item-card img{
+  width: 60%
 }
 }
