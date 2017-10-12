@@ -47,12 +47,12 @@ class Affiliate extends Component {
                 <div style={{padding:"5% 0px 5%",background:"#fff"}}>
                 <center><a className="btn btn-custom" href="/" role="button" style={{padding:"10px 70px"}}>Join</a> </center>
                 </div>
-                <style>{`
-                    .text-lg{font-size:2.5em;font-family:verdana;font-weight:bold}
+                {/* <style>{`
+                    .affiliate .text-lg{font-size:2.5em;font-family:verdana;font-weight:bold}
                     .affiliate .text span{margin-right:5px  }
                     .affiliate .btn-default{padding:10px 30px;font-size:0.8em;border:1px solid #eee;background:transparent;color:#fff;border-radius:20px}
                     `}
-                </style>
+                </style> */}
             </div>
         );
     }

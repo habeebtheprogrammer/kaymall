@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 class Header extends Component {
+    constructor(){
+        super();
+        this.state = {
+            cart    :[]
+        }
+    }
+   cartWillUpdate(params){
+
+   }
     render() {
         var rand = Math.random() +1 
         console.log(rand)
@@ -8,7 +17,7 @@ class Header extends Component {
             <img src="../images/we-are-3-banner-2400x480-2.jpg" width="100%" className="img-responsive" alt=""/>:null;
         var img2 = window.location.pathname !== '/' && window.innerWidth > 500 && window.location.pathname !== '/affiliate'? 
             <img src="../../images/home3_block1_banner-1.png" width="100%" className="img-responsive" alt="" /> : null;
-        
+        if(window.location.pathname === '/cart') return null;
         return (
             <div className="header">
                 {img}
@@ -42,16 +51,17 @@ class Header extends Component {
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li>
-                                <a href="/" className="cart-icon">
+                                <Link to="/cart" className="cart-icon">
                                     <i className="fa fa-shopping-cart"></i>
-                                    <span className="addedItems">0</span>
-                                </a>
+                                    <span className="addedItems">{this.props.itemsInCart.length}</span>
+                                </Link>
+                                
                             </li>
                             <li>
-                                <a href="/" className="cart-icon">
-                                    <i className="fa fa-shopping-cart"></i>
-                                    <span>3</span>
-                                </a>
+                                <Link to="/cart" className="cart-icon">
+                                  <i className="fa fa-money"></i>
+                                    <span>0</span>
+                                </Link>
                             </li>
                             <li className="">
                                 <Link to="/login">
@@ -80,17 +90,26 @@ class Header extends Component {
                 </div>
                   <div className="modal fade" id="added-success">
                       <div className="modal-dialog modal-lg" >
-                        <div className="modal-content " style={{  }}>
-                              <div className="modal-header">
-                                  <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                  <h4 className="modal-title">Modal title</h4>
-                              </div>
+                        <div className="modal-content " style={{ boxShadow: "0px 0px" }}>
                               <div className="modal-body">
+                                  <div className="row">
+                                    <div className="col-xs-1">
+                                        <i className="fa fa-check-circle" style={{ fontSize: "1.5em" }}></i>
+                                    </div>
+                                      <div className="col-xs-10">
+                                        <center>
+                                            Successfully added item to cart
+                                            <div>
+                                                <Link className="btn btn-default"  to="/cart" role="button" style={{border:"1px solid #fff"}}>VIEW CART</Link>
+                                                <a className="btn btn-default" href="#" data-dismiss="modal" role="button" style={{ border: "1px solid #fff", margin: "10px 10px 10px 0px" }}>CONTINUE SHOPPING</a>
+                                            </div>
+                                        </center>
+                                      </div>
+                                      <div className="col-xs-1">
+                                        <button data-dismiss="modal" className="btn  pull-right" href="#" style={{padding:"0px", background:"transparent"}}><i className="fa fa-times" style={{fontSize:"1.5em"}}></i> </button>
+                                      </div>
+                                  </div>
                                   
-                              </div>
-                              <div className="modal-footer">
-                                  <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                                  <button type="button" className="btn btn-primary">Save changes</button>
                               </div>
                           </div>
                       </div>

@@ -4,15 +4,16 @@ import {Link} from 'react-router-dom'
 import Locationbar from './locationbar';
 import Carousel from './carousel';
 
-const Preview = ({ match }) => {
-
+const Preview = ({ match,passUpdate2 }) => {
+        function passUpdate(){
+            passUpdate2(match.params.id)
+        }
         for(var i=0;i<Store.items.length; i++)
-        {
-            var findId = Store.items[i].products.filter((item)=>{
-                return (item.title === match.params.id)});
-           if(findId[0] !== undefined)  break;          
-                
-         }
+            {
+                var findId = Store.items[i].products.filter((item)=>{
+                    return (item.title === match.params.id)});
+            if(findId[0] !== undefined)  break;          
+            }
          if(findId[0] === undefined) return (<Locationbar match={match} />)
     return (
         <div className="preview">
@@ -23,13 +24,13 @@ const Preview = ({ match }) => {
                             <div className="" style={{ background: "#fff",padding:"4% 0%",marginBottom:"20px" }} >
                              
                              <div className="row">
-                                <div className="col-xs-7 full-xs col-sm-7 " style={{ padding: "0% 7%" }}>
+                                <div className="col-xs-7 full-xs col-sm-7 " style={{ padding: "0% 10%" }}>
                                     <div style={{marginBottom:"5px"}}>
                                         <Carousel img1={findId[0].url} img2={findId[0].url} img3={findId[0].url}/>
                                     </div>
                                  </div>
                                  <div className="col-xs-4 full-xs col-sm-4 ">
-                                    <div style={{ padding: "0% 1%" }}>
+                                    <div style={{ padding: "0% 0%" }}>
                                        <i> Sold by </i> 
                                        <i className="fa fa-user"></i>
                                         <span> Omalicha </span>
@@ -42,7 +43,7 @@ const Preview = ({ match }) => {
                                             <span>☆</span>  
                                         </div><small > <b>(0 Review) </b></small>
                                         <div style={{marginBottom:"15px"}}></div>
-                                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.3em", "fontWeight": "800" }}>{findId[0].price}</p> <s>{findId[0].slash}</s>
+                                        <p className="text-black" style={{ margin: "0px", color: "#F5611D", "fontSize": "1.3em", "fontWeight": "800" }}>{findId[0].price}</p> 
                                         <p> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "5px" }}></i> 2 in stock</p>
                                         
                                         <div role="tabpanel">
@@ -86,7 +87,7 @@ const Preview = ({ match }) => {
                                                             </span>
                                                         </div>
                                                         
-                                                        <button type="submit" className="btn btn-custom pull-right addToCart" data-toggle="modal" href='#added-success' style={{marginTop:"10px"}}>Add to cart</button>
+                                                        <button type="submit" className="btn btn-custom pull-right addToCart" onClick={passUpdate} data-toggle="modal" href='#added-success' style={{marginTop:"10px"}}>Buy</button>
                                                     
                                                     
                                                 </div>
@@ -166,7 +167,7 @@ const Preview = ({ match }) => {
                                     </span>
                                 </div>
 
-                                <button  className="btn btn-custom btn-block"  data-toggle="modal" href='#added-success'  style={{ marginTop: "10px" }}>
+                                <button className="btn btn-custom btn-block" onClick={passUpdate}  data-toggle="modal" href='#added-success'  style={{ marginTop: "10px" }}>
                                 <span>+</span> <i className="fa fa-shopping-cart"></i>
                                 </button>
                                 <div className="clearfix">

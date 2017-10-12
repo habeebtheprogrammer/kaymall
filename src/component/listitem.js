@@ -2,17 +2,20 @@ import React from 'react';
 import Itemcard from './itemcard';
 import Store from './data';
 import Locationbar from './locationbar';
-const Listitem = ({match})=>{
+const Listitem = ({match,passUpdate2})=>{
+    function passUpdate(params) {
+        // console.log(props,0)
+        passUpdate2(params)
+    }
     var finditem = Store.items.filter((item)=>(match.params.title === item.category.url));
     var items = finditem[0].products.map((item)=>(
-        <Itemcard {...item} key={item.id} match={match}/>
+        <Itemcard {...item} key={item.id} match={match} passUpdate={passUpdate}/>
     )); 
    return (<div>
        <Locationbar match={match} />       
        <div className="container" >     
                     {items}
                     {items}
-
                 <div className="clearfix">
                 </div>
         </div>

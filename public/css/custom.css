@@ -20,6 +20,7 @@ a:hover{
 ::-webkit-input-placeholder{
   border: none;
   opacity: 0.5;
+  padding: 0px;
 }
 .header .nav.navbar-nav a{
   background: #fff;
@@ -32,7 +33,6 @@ a:hover{
   background: #fff;
 }
 .item-card:hover >div{
-  cursor: pointer;
   box-shadow: 0 3px 8px 0 grey;
   -webkit-transition: 0.2s ease-in  ;
   -moz-transition: 0.2s ease-in  ;
@@ -136,18 +136,32 @@ nav .navbar-toggle {
     font-weight: bold;
     text-transform: capitalize;
 }
+#added-success .modal-body{
+  background: #5EC066;
+  color:#fff;
+}
 .home-icon span{
   color: #f16439;
   font-size: 0.8em;
 }
+ .affiliate .text-lg{font-size:2.5em;font-family:verdana;font-weight:bold}
+.affiliate .text span{margin-right:5px  }
+.affiliate .btn-default, .modal .btn-default{
+  padding:5px 30px;
+  margin:10px 10px 10px 0px;
+font-size:0.8em;
+border:1px solid #eee;
+background:transparent;
+color:#fff;border-radius:20px}
 .category-list{
    padding: 0% 10%;
   /* text-align: center; */
 }
-.list-group-item{
+.category-list .list-group-item{
   border: none;
   font-size: 1em;
 }
+
 .news-letter{
   background: #fff;
   padding: 3%;
@@ -161,7 +175,7 @@ nav .navbar-toggle {
  cursor: pointer;
  float: left
 }
-.news-letter input,.seller-account .form-control{
+.news-letter input, .form-control{
   border: none ;
   border-bottom: 1px solid #D3D3D3;
   width: 100%;
@@ -302,7 +316,7 @@ footer .navbar-nav a.dropdown-toggle  {
       font-size: 1em;
     float:left;
     width:33.33%;
-    padding: 0px 5px 5px;
+    padding: 0px 5px 20px;
 }
 .item-img{
   width: 80%
@@ -442,7 +456,8 @@ nav .middle-grid{
 }
 ::-webkit-input-placeholder{
   color: #bbb;
-  opacity: 1
+  opacity: 1;
+  padding-left: 5px;
 
 }
 .hover-title{
