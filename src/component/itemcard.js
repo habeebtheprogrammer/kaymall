@@ -45,7 +45,7 @@ const Itemcard = ({ url, price, slash, discount, title,match,passUpdate })=>
                     </a>
 
 
-                   <button type="button" onClick={updateCart}  data-toggle="modal" href='#added-success' style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", fontSize: "0.7em",right:"10px", bottom:"15px",   position:"absolute", padding: "4px 15px" }} className="btn addToCart">Add to Cart</button>
+                   <button type="button" onClick={updateCart}  data-toggle="modal" href='#added-success' style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right:"10px", bottom:"15px",   position:"absolute", padding: "4px 15px" }} className="btn addToCart">Add to Cart</button>
 
 
                     </div>

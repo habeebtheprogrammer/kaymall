@@ -28,7 +28,9 @@ a:hover{
 .navbar{
   margin-bottom: 0px;
 }
-
+.item-card .addToCart{
+  font-size: 0.7em
+}
 .nav.navbar-nav a:focus{
   background: #fff;
 }
