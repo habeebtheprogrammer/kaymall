@@ -1,10 +1,12 @@
-var addbtn = document.getElementsByClassName('addToCart');
-addbtn[0].addEventListener("click",addToCart)
-var addToCart = () => {
-    var node = document.getElementsByClassName('addedItems');
-    var num = node[0].innerHTML;
-    num = parseInt(num);
-    num += 1;
-    node[0].innerHTML = num;
-    alert("added successfully");
-}
+$(document).ready(function(){
+    $('.addToCart').on("click", function (e) {
+        $(this).html('')
+        $(this).append("<i class='fa fa-check'></i>");
+        $(this).append(' ADDED');
+        this.disabled = true;
+        $(this).css({ "background": "#3aba64" })
+        $(".cart-icon span").css({"background":"#3aba64"})
+        var discount = $(this).parent().siblings('div');
+        $(discount).css({ "background": "#3aba64" })
+    })
+})

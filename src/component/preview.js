@@ -88,7 +88,7 @@ const Preview = ({ match,passUpdate2 }) => {
                                                             </div>
                                                         </div>
                                                         
-                                                        <button type="submit" className="btn btn-default btn-block addToCart" onClick={passUpdate} data-toggle="modal" href='#added-success' style={{marginTop:"10px"}}>BUY</button>
+                                                        <button type="submit" className="btn btn-default btn-block " onClick={passUpdate} data-toggle="modal" href='#added-success' style={{marginTop:"10px"}}>BUY</button>
                                                     
                                                     
                                                 </div>

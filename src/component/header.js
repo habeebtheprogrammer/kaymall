@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import $ from 'jquery'
 class Header extends Component {
     constructor(){
         super();
@@ -7,9 +8,11 @@ class Header extends Component {
             cart    :[]
         }
     }
-   cartWillUpdate(params){
-
+   
+   componentWillMount() {
+ 
    }
+   
     render() {
         var rand = Math.random() +1 
         console.log(rand)

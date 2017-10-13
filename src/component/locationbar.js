@@ -25,7 +25,7 @@ var id = (match.path === "/category/:title/:id") ?
                 </Link>
             </div>
             <div className="col-xs-3 col-sm-3 col-md-3 col-lg-1 pad">
-                <Link to="/" >
+                <Link to="/category" >
                     <span> Category</span>
                 </Link>
             </div>
