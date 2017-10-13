@@ -8,9 +8,9 @@ class Cart extends Component {
             <div className="col-sm-4 zero" style={{padding:"5px"}}>
                 <div className="row" style={{ background: "#fff", padding:"10px 0px"}}>
 
-                    <div className="col-xs-3 zero">
+                    <div className="col-xs-3 zero" style={{padding:"0px 10px"}}>
                       
-                        <img src={`../images/${item.url}`} width="95%" alt="img" style={{marginTop:"10px"}}/>
+                        <img src={`../images/${item.url}`} width="100%" alt="img" style={{marginTop:"10px",}}/>
                         
                     </div>
                     <div className="col-xs-9">
