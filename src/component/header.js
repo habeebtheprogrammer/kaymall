@@ -74,9 +74,14 @@ class Header extends Component {
                 <div className="input-group" style={{ width: "100%" }}>
 
                     <input className="form-control search-bar" type="text" name="" placeholder='Search for products, brand and categories' />
+                    <div className="input-group-addon" style={{ background: "#fff", borderTop: "0px", borderRight: "0px", borderBottom:"1px solid #E9E9E9"}}  >
+                    <i className="fa fa-search"></i>
+                    </div>
                     
             
                 </div>
+                
+
                 <div className="hidden-lg hidden-sm hidden-md" style={{ background:"#f16439",color:"#fff",fontSize:"0.9em",padding:"20px 0px 20px 20px"}}>
                     <div className="row">
                         <div className="col-xs-8 ">
@@ -88,8 +93,8 @@ class Header extends Component {
                         </div>
                     </div>
                 </div>
-                  <div className="modal fade" id="added-success">
-                      <div className="modal-dialog modal-lg" >
+                <div className="modal fade" id="added-success" >
+                      <div className="modal-dialog " >
                         <div className="modal-content " style={{ boxShadow: "0px 0px" }}>
                               <div className="modal-body">
                                   <div className="row">

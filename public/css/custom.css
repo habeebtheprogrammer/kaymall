@@ -97,10 +97,13 @@ nav .navbar-toggle {
 .search-bar{
    width: 100%;
    border: 0px;
-    border-bottom: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E9E9E9;
    min-Height:70px;
    padding: 2.4%;
    letter-spacing: 1px;
+}
+.form-control.search-bar{
+  border-bottom: 1px solid #E9E9E9;;
 }
 .navbar.navbar-custom{
   padding: 0px 3px;
@@ -139,7 +142,7 @@ nav .navbar-toggle {
     text-transform: capitalize;
 }
 #added-success .modal-body{
-  background: #5EC066;
+  background: #3aba64;
   color:#fff;
 }
 .home-icon span{
@@ -163,6 +166,9 @@ color:#fff;border-radius:20px}
   border: none;
   font-size: 1em;
 }
+ .disclaimer .clearfix{
+  padding: 30px 0px;
+}
 
 .news-letter{
   background: #fff;
@@ -180,22 +186,20 @@ color:#fff;border-radius:20px}
 .news-letter input, .form-control{
   border: none ;
   border-bottom: 1px solid #D3D3D3;
-  width: 100%;
   box-shadow: 0 0;
-  
 }
 .form-control:focus{
   border-bottom: 1px solid #D3D3D3;
 }
-.news-letter .form-group{
+/* .news-letter .form-group{
   width: 50%
-}
+} */
 .news-letter form button, .btn-custom{
   border-radius: 20px;
-  padding: 8px 20px;
+  padding: 6px 10px;
   text-transform: uppercase;
   background: #f16439;
-  color: #eee;
+  color: #fff;
 }
 .btn-custom:hover,.btn-custom:focus,.btn-custom:active{
   
@@ -287,7 +291,7 @@ label span{
   background: #fff;
 }
 #brand-carousel .nav li a{
-  margin: 20px 30px;
+  margin: 15px 30px;
   font-size: 0.9em;
   float: left;
 }
@@ -321,7 +325,8 @@ footer .navbar-nav a.dropdown-toggle  {
     padding: 0px 5px 20px;
 }
 .item-img{
-  width: 80%
+  width: 70%;
+  margin: 25px 0px
 }
 .divider{
   border-bottom: 1px solid lightgrey;
@@ -352,14 +357,36 @@ select.form-control{
 .locationbar .nav li {
   display: inline-block
 }
+.locationbar .pad,.locationbar .pad a{
+  margin: 10px 0px;
+  color: #aaa;
+}
 
+/* .locationbar .pad::after{
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent grey;
+  position: absolute;
+  right: 0;
+} */
 .preview .container{
   padding: 0px;
 }
 .seller-account    .form-group{margin-bottom:20px}
-
+.disclaimer{
+  padding: 0px 0px;
+}
+.disclaimer i{
+  font-size:2em
+}
 @media (min-width: 768px) {
-
+.disclaimer{
+  padding: 0px 50px;
+}
+.disclaimer i{
+  font-size:2.5em
+}
   .item-card{
       font-size: 1em;
     float:left;
@@ -437,7 +464,7 @@ nav .middle-grid{
     padding: 0px 10px 20px;
 }
 .container{
-  width: 83%;
+  width: 87%;
 }
 nav .middle-grid{
    margin-left:20%
@@ -488,9 +515,11 @@ nav .middle-grid{
   color: #C0C0C0;
   float: left;
 }
+
 .item-card{
   width: 100%;
   font-size: 1em;
+  padding: 0px;
   margin: 0px 0px 10px;
 }
 .navbar-brand{
@@ -505,5 +534,17 @@ button.navbar-toggle{
 }
 .item-card img{
   width: 60%
+}
+footer{
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.news-letter-title{
+  font-size: 1.8em;
+  color: #808080;
+}
+.news-letter{
+  padding: 30px 0px
 }
 }

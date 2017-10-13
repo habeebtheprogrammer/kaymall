@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Store from './data';
 class Cart extends Component {
+  
     render() {
+        console.log(this.state)
         var items = this.props.cartItems.map((item)=>(
             <div className="col-sm-4 zero" >
-                <div className="row" style={{ background: "#fff", minHeight: "100px", margin: "10px 20px" }}>
+                <div className="row" style={{ background: "#fff", minHeight: "100px", margin: "20px 10px 0px" }}>
 
                     <div className="col-xs-3 zero">
                       
@@ -36,7 +38,7 @@ class Cart extends Component {
                             
                             
                         </div>
-                        <span className="pull-right"><b>10,302</b></span>  
+                        <span className="pull-right"><b>{item.price}</b></span>  
                     </div>
                     
                 </div>
@@ -48,10 +50,10 @@ class Cart extends Component {
                     <div className="col-xs-12 zero">
                         <div style={{ background: "#fff",padding:"20px 0px",borderBottom:"1px solid lightgrey", color:"#000",textAlign:"center" }}>
                             <h3 style={{ margin: "0px", color: "#000",fontWeight:"bold"}}> Shopping Cart </h3>
-                            <small> 1 Item (s) </small>
+                            <small> {this.props.cartItems.length} Item (s) </small>
                         </div>
                     </div>
-                    <div className="col-sm-9 zero" >
+                    <div className="col-sm-9 " >
                         <div className="row" >
                             
                          {items}
@@ -59,7 +61,7 @@ class Cart extends Component {
                             
                         </div>
                     </div>
-                    <div className="col-sm-3 checkout" >
+                    <div className="col-sm-3 checkout zero" >
                         <div style={{ background: "#fff",padding:"10px 0px", minHeight: "500px"}}>
                            
                             

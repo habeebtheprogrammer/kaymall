@@ -7,7 +7,7 @@ const Categorycard = ({category,banner,products,match})=>{
     var path = (match === undefined) ? 'category':match.url;
     if (category.name.length > 10) {
         var subname = category.name.substr(0, 10);
-        subname += "..."
+        subname += "...";
     }
   
     return(

@@ -13,13 +13,17 @@ class Footer extends Component {
 
                             <form action="" method="POST" className="form-inline" style={{ margin: "1% 0px 2%" }} >
 
-                                <div className="form-group">
+                                <div className="form-group  col-sm-9">
                                     <label className="sr-only" >label</label>
-                                    <input type="email" className="" id="" />
+                                    <input type="email" className="form-control" id="" style={{width:"100%"}}/>
                                 </div>
-                                <button type="submit" className="btn btn-custom">Subscribe</button>
+                                
+                                <div className="form-group">
+                                    <button type="submit" className="btn btn-custom ">Subscribe</button>
+                                </div>
+                                
                             </form>
-                            Subscribe to receive our latest deals, gifts, and more!
+                            <div style={{margin:"30px 0px"}}>Subscribe to receive our latest deals, gifts, and more!</div>
 
                             </div>
 
@@ -54,7 +58,6 @@ class Footer extends Component {
                         </li>
                     </ul>
                 </div>
-                df
             </footer>
         );
     }

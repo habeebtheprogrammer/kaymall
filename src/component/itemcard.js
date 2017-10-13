@@ -25,12 +25,15 @@ const Itemcard = ({ url, price, slash, discount, title,match,passUpdate })=>
                     <div className="discount1" style={{ "position": "absolute",  }}>{discount} </div>
                     <center>
                     <img src={`../images/${url}`} className="item-img" alt={title}/>
-                    </center><hr style={{ margin: "5px 0px 20px",border:"none" }} />
-                <div className="anchor"style={{"padding": "0px 10px 10px" }}>
+                    </center>
+                <div className="anchor"style={{"padding": "0px 10px 40px" }}>
                    <a href={`${match.url}/${title}`} style={{"textDecoration":"none"}}>
                         
                             <p style={{ textTransform: "capitalize", fontSize: "1em"}}> {subtitle}</p>
                         {/* <b>{title}</b> */}
+
+
+                        </a>
                         <p className="pull-right"> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
                         
                         
@@ -41,8 +44,6 @@ const Itemcard = ({ url, price, slash, discount, title,match,passUpdate })=>
 
                             </p>
                        
-                        
-                    </a>
 
 
                    <button type="button" onClick={updateCart}  data-toggle="modal" href='#added-success' style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right:"10px", bottom:"15px",   position:"absolute", padding: "4px 15px" }} className="btn addToCart">Add to Cart</button>

@@ -24,7 +24,7 @@ const Preview = ({ match,passUpdate2 }) => {
                             <div className="" style={{ background: "#fff",padding:"4% 0%",marginBottom:"20px" }} >
                              
                              <div className="row">
-                                <div className="col-xs-7 full-xs col-sm-7 " style={{ padding: "0% 10%" }}>
+                                <div className="col-xs-7 full-xs col-sm-7 " style={{ padding: "0% 11%" }}>
                                     <div style={{marginBottom:"5px"}}>
                                         <Carousel img1={findId[0].url} img2={findId[0].url} img3={findId[0].url}/>
                                     </div>
@@ -71,23 +71,24 @@ const Preview = ({ match,passUpdate2 }) => {
                                                         </div>
                                                         <p><Link to={match.url} style={{ color: "#F5611D", fontWeight: "bold" }}>Size Guide </Link></p>
                                                         <p> Quantity</p>
-                                                        <div className="input-group">
-                                                            <span className="input-group-btn">
-                                                                <button type="button" className="btn btn-default">
+                                                        <div className="col-xs-12   zero" style={{marginBottom:"10px"}}>
+                                                            <div className="" style={{  bottom: "0" }} >
+
+                                                                <button type="button" className="btn " style={{ padding: "2px 5px", float: "left", fontSize: "9px" }}>
+
                                                                     <i className="fa fa-minus"></i>
+
                                                                 </button>
-                                                            </span>
-                                                            
-                                                            <input type="number" className="form-control"  value="1" required="required" />
-                                                            
-                                                            <span className="input-group-btn">
-                                                                <button type="button" className="btn btn-default">
-                                                                <i className="fa fa-plus"></i>
+                                                                <input type="text" value="1" className="form-control" style={{ padding: "10px 6px", float: "left", width: "30px", height: "0px", border: "inherit" }} />
+                                                                <button type="button" className="btn " style={{ padding: "2px 5px", float: "left", fontSize: "9px" }}>
+                                                                    <i className="fa fa-plus"></i>
                                                                 </button>
-                                                            </span>
+
+
+                                                            </div>
                                                         </div>
                                                         
-                                                        <button type="submit" className="btn btn-custom pull-right addToCart" onClick={passUpdate} data-toggle="modal" href='#added-success' style={{marginTop:"10px"}}>Buy</button>
+                                                        <button type="submit" className="btn btn-default btn-block addToCart" onClick={passUpdate} data-toggle="modal" href='#added-success' style={{marginTop:"10px"}}>BUY</button>
                                                     
                                                     
                                                 </div>
@@ -104,10 +105,10 @@ const Preview = ({ match,passUpdate2 }) => {
                                 
                                 
                             </div>
-                            <div className="" style={{ background: "#fff", padding: "4% 4%",color:"#000" }} >
+                            <div className="" style={{ background: "#fff", padding: "4% 5%" }} >
                                 
                                 <div className="row">
-                                    <div className=" col-sm-6">
+                                    <div className=" col-sm-6 zero">
                                         <p>Description</p>
                                         <p><b>Features:</b></p>
                                         <p>Easy to clean and polish</p>
@@ -120,8 +121,36 @@ const Preview = ({ match,passUpdate2 }) => {
                                         <p>comfortable sitting</p>
 
                                     </div>
-                                    <div className=" col-sm-6 ">
+                                    <div className=" col-sm-6 zero">
                                        
+                                        
+                                        <div className="row disclaimer">
+                                            
+                                            <div className="col-xs-2 zero">
+                                                <i className="fa fa-truck" ></i>
+                                            </div>
+                                            <div className="col-xs-10 ">
+                                               <span> Products Usually Shipped Out In 1 Day From Ilorin</span>
+                                            </div><div className="clearfix"></div>
+                                            <div className="col-xs-2 zero">
+                                                <i className="fa fa-phone" ></i>
+                                            </div>
+                                            <div className="col-xs-10 ">
+                                                <span> Call Us Now for More Info On Our Products</span>
+                                            </div><div className="clearfix"></div>
+                                            <div className="col-xs-2 zero">
+                                                <i className="fa fa-gift"></i>
+                                            </div>
+                                            <div className="col-xs-10 ">
+                                                <span> Free Shipping For All Products</span>
+                                            </div><div className="clearfix"></div>
+                                            <div className="col-xs-2 zero">
+                                                <i className="fa fa-refresh"></i>
+                                            </div>
+                                            <div className="col-xs-10 ">
+                                                <span> Return Purchase Item</span>
+                                            </div>
+                                        </div>
                                         
                                     </div>
                                 </div>
@@ -151,20 +180,21 @@ const Preview = ({ match,passUpdate2 }) => {
                                 </div>
                                 <p><Link to={match.url} style={{ color: "#F5611D", fontWeight: "bold" }}>Size Guide </Link></p>
                                 <p> Quantity</p>
-                                <div className="input-group">
-                                    <span className="input-group-btn">
-                                        <button type="button" className="btn btn-default">
+                                <div className="col-xs-12   zero" style={{ marginBottom: "10px" }}>
+                                    <div className="" style={{ bottom: "0" }} >
+
+                                        <button type="button" className="btn " style={{ padding: "2px 5px", float: "left", fontSize: "9px" }}>
+
                                             <i className="fa fa-minus"></i>
+
                                         </button>
-                                    </span>
-
-                                    <input type="number" className="form-control" value="1" required="required" />
-
-                                    <span className="input-group-btn">
-                                        <button type="button" className="btn btn-default" >
+                                        <input type="text" value="1" className="form-control" style={{ padding: "10px 6px", float: "left", width: "30px", height: "0px", border: "inherit" }} />
+                                        <button type="button" className="btn " style={{ padding: "2px 5px", float: "left", fontSize: "9px" }}>
                                             <i className="fa fa-plus"></i>
                                         </button>
-                                    </span>
+
+
+                                    </div>
                                 </div>
 
                                 <button className="btn btn-custom btn-block" onClick={passUpdate}  data-toggle="modal" href='#added-success'  style={{ marginTop: "10px" }}>
