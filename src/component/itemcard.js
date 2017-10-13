@@ -26,15 +26,20 @@ const Itemcard = ({ url, price, slash, discount, title,match,passUpdate })=>
                     <center>
                     <img src={`../images/${url}`} className="item-img" alt={title}/>
                     </center>
-                <div className="anchor"style={{"padding": "0px 10px 40px" }}>
-                   <a href={`${match.url}/${title}`} style={{"textDecoration":"none"}}>
+                <div className="anchor"style={{"padding": "0px 10px 10px" }}>
+                   <a href={`${match.url}/${title}`} className="title"style={{"textDecoration":"none"}}>
                         
-                            <p style={{ textTransform: "capitalize", fontSize: "1em"}}> {subtitle}</p>
+                            <span style={{ textTransform: "capitalize", fontSize: "1em"}}> {subtitle}</span>
                         {/* <b>{title}</b> */}
 
 
                         </a>
-                        <p className="pull-right"> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
+                        
+                        <div className="clearfix">
+                        
+                        </div>
+                        
+                        <p className="pull-right "> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
                         
                         
                         <p className="slash" style={{margin:"0px",color:"#ccc"}}><s>{slash}</s></p>

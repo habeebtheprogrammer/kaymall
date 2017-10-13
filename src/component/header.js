@@ -82,7 +82,7 @@ class Header extends Component {
                 </div>
                 
 
-                <div className="hidden-lg hidden-sm hidden-md" style={{ background:"#f16439",color:"#fff",fontSize:"0.9em",padding:"20px 0px 20px 20px"}}>
+                <div className="hidden-lg hidden-sm hidden-md" style={{ background:"#f16439",color:"#fff",fontSize:"1em",padding:"20px 0px 20px 20px"}}>
                     <div className="row">
                         <div className="col-xs-8 ">
                             <span>Home market store find it for free on Google Play</span>
@@ -106,7 +106,7 @@ class Header extends Component {
                                             Successfully added item to cart
                                             <div>
                                                 <Link className="btn btn-default"  to="/cart" role="button" style={{border:"1px solid #fff"}}>VIEW CART</Link>
-                                                <a className="btn btn-default" href="#" data-dismiss="modal" role="button" style={{ border: "1px solid #fff", margin: "10px 10px 10px 0px" }}>CONTINUE SHOPPING</a>
+                                                <a className="btn btn-default" href="#" data-dismiss="modal" role="button" style={{ border: "1px solid #fff", margin: "10px 10px 10px 0px" }}>CONTINUE</a>
                                             </div>
                                         </center>
                                       </div>
