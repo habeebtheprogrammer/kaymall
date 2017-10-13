@@ -43,7 +43,7 @@ class Itemcard extends Component {
                     <center>
                         <img src={`../images/${this.props.url}`} className="item-img" alt={this.props.title} />
                     </center>
-                    <div className="anchor" style={{ "padding": "0px 10px 10px" }}>
+                    <div className="anchor" style={{ "padding": "10px 10px 10px" }}>
                         <a href={`${this.props.match.url}/${this.props.title}`} className="title" style={{ "textDecoration": "none" }}>
 
                             <span style={{ textTransform: "capitalize", fontSize: "1em" }}> {subtitle}</span>
@@ -59,7 +59,7 @@ class Itemcard extends Component {
                         <p className="pull-right "> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
 
 
-                        <p className="slash" style={{ margin: "0px", color: "#ccc" }}><s>{this.props.slash}</s></p>
+                        <p className="slash" style={{ margin: "0px", color: "#ccc" }}><s><b>{this.props.slash}</b></s></p>
                         <p className="item-price" style={{}}>{this.props.price} </p>
                         <p style={{ "margin": "0px" }}>
                             Dolce n Gabbana
