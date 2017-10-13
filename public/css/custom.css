@@ -80,7 +80,7 @@ a{
 
 }
 .navbar-brand i{
-  margin-right: 10px;
+  padding-right: 10px;
   color: #f16439;
 }
 nav .navbar-toggle {
@@ -411,7 +411,7 @@ select.form-control{
 
 
 .navbar-brand {
-  padding: 15px 5px;
+  padding: 15px 10px;
 }
 .padding-20px{
   padding: 0px;
@@ -524,7 +524,7 @@ nav .middle-grid{
 }
 .navbar-brand{
   height: 0px;
-  padding:8px 10px;
+  padding:10px;
   font-size: 1em;
 }
 button.navbar-toggle{
@@ -550,7 +550,6 @@ footer{
   background :#eee;  
 }
 .item-card .anchor{
-  
-  box-shadow: 0 1px 1px 0 #ccc;
+  border: 1px solid #eee;
 }
 }

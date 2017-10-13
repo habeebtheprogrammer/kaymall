@@ -34,7 +34,7 @@ class Header extends Component {
                             
                            
                             <i className="fa fa-car" ></i>
-                            Homemarket
+                            <span>Homemarket</span>
                             
                         </Link>
                     </div>
