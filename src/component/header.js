@@ -10,7 +10,7 @@ class Header extends Component {
     }
    
    componentWillMount() {
-  
+    
    }
    
     render() {
@@ -19,12 +19,11 @@ class Header extends Component {
         var img = window.location.pathname ==='/' && window.innerWidth > 500? 
             <img src="../images/we-are-3-banner-2400x480-2.jpg" width="100%" className="img-responsive" alt=""/>:null;
         var img2 = window.location.pathname !== '/' && window.innerWidth > 500 && window.location.pathname !== '/affiliate'? 
-            <img src="../../images/home3_block1_banner-1.png" width="100%" className="img-responsive" alt="" /> : null;
+            <img src="../../images/female_shoes_large_banner_800x4501.jpg" width="100%" className="img-responsive" alt="" /> : null;
         if(window.location.pathname === '/cart') return null;
         return (
             <div className="header">
                 {img}
-                {img2}
                 <nav className="navbar navbar-custom fixed-bar">
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
