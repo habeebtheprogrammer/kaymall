@@ -32,6 +32,14 @@ class Header extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
+                        <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px 8px"}}>
+                            <i className="fa fa-shopping-cart"></i>
+                            <span className="addedItems">{this.props.itemsInCart.length}</span>
+                        </Link>
+                         <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px 8px"}}>
+                            <i className="fa fa-comment"></i>
+                            <span className="addedItems">{this.props.itemsInCart.length}</span>
+                        </Link>
                         <Link className="navbar-brand" to="/">
                             
                            

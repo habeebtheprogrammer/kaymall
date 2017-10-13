@@ -5,17 +5,17 @@ class Cart extends Component {
     render() {
         console.log(this.state)
         var items = this.props.cartItems.map((item)=>(
-            <div className="col-sm-4 zero" >
-                <div className="row" style={{ background: "#fff", minHeight: "100px", margin: "20px 10px 0px" }}>
+            <div className="col-sm-4 zero" style={{padding:"5px"}}>
+                <div className="row" style={{ background: "#fff", padding:"10px 0px"}}>
 
                     <div className="col-xs-3 zero">
                       
-                        <img src={`../images/${item.url}`} style={{margin:"10px 0px 0px"}} width="100%" alt="img" />
+                        <img src={`../images/${item.url}`} width="95%" alt="img" style={{marginTop:"10px"}}/>
                         
                     </div>
                     <div className="col-xs-9">
-                        <div style={{ margin: "10px 0px 0px"}}>
-                        <p style={{margin:"0px"}}><b>{item.title}</b></p>
+                        <div style={{ }}>
+                        <p style={{margin:"0px"}}>{item.title}</p>
                         <small>EU12</small>
                         </div>
                     </div>
@@ -23,22 +23,22 @@ class Cart extends Component {
                         
                     </div>
                     
-                    <div className="col-xs-12   " style={{ paddingBottom: "10px" }}>
-                        <div className="" style={{ width: "80px",marginLeft:"28%", bottom: "0" }} >
+                    <div className="col-xs-12   " >
+                        <div className="flex-box"  >
                             
-                            <button type="button" className="btn " style={{ padding: "2px 5px", float: "left", fontSize: "9px" }}>
+                            <button type="button" className="btn ">
 
                                 <i className="fa fa-minus"></i>
 
                             </button>
-                            <input type="text" value="1" className="form-control" style={{ padding: "10px 6px", float: "left", width: "30px", height: "0px", border: "inherit" }} />
-                            <button type="button" className="btn " style={{ padding: "2px 5px", float: "left", fontSize: "9px" }}>
+                            <input type="text" value="1" className="form-control" />
+                            <button type="button" className="btn ">
                                 <i className="fa fa-plus"></i>
                             </button>
                             
                             
                         </div>
-                        <span className="pull-right"><b>{item.price}</b></span>  
+                        <span className="pull-right">{item.price}</span>  
                     </div>
                     
                 </div>
@@ -53,7 +53,7 @@ class Cart extends Component {
                             <small> {this.props.cartItems.length} Item (s) </small>
                         </div>
                     </div>
-                    <div className="col-sm-9 " >
+                    <div className="col-sm-9 zero" >
                         <div className="row" >
                             
                          {items}

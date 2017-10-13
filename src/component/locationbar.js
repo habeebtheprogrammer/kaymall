@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 const Locationbar =({match})=>{
 console.log(match)
 var id = (match.path === "/category/:title/:id") ? 
-    <div className="col-xs-12 col-sm-3 col-md-3 col-lg-5 pad">
+    <div className="pad" style={{ float: "left" }}>
         <Link to={match.url}>
             <span>{match.params.id}</span>
         </Link>
     </div>:null;
     var titleparams = match !== undefined ? 
-        <div className="col-xs-7 col-sm-3 col-md-3 col-lg-1 pad">
+        <div className=" pad" style={{float:"left"}}>
             <Link to={`/category/${match.params.title}`}>
                 <span >{match.params.title} </span>
             </Link>
@@ -19,12 +19,12 @@ var id = (match.path === "/category/:title/:id") ?
         
          <div className="row">
            
-            <div className="col-xs-2 col-sm-3 col-md-3 col-lg-1 pad" >
+                <div className="pad" style={{ float: "left" }} >
                 <Link to="/" >
                     <span >Home </span>
                 </Link>
             </div>
-            <div className="col-xs-3 col-sm-3 col-md-3 col-lg-1 pad">
+                <div className="pad" style={{ float: "left" }}>
                 <Link to="/category" >
                     <span> Category</span>
                 </Link>

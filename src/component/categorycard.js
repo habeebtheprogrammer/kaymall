@@ -28,43 +28,45 @@ const Categorycard = ({category,banner,products,match})=>{
 
                     </div>
                 </div>
-                <Link to={`${path}/${category.url}`} >               
+                          
                 <div className="  col-sm-5 col-xs-6 zero" >
                     <div className="bg-lg" style={{ overflow: "hidden"}}>
+                        <Link to={`${path}/${category.url}`} >     
                         <div className="custom-overlay"></div>
                         <p className="show-title" style={{ color: "#fff",fontWeight:"bold",textTransform:"capitalize", padding:"30% 35%",textAlign:"center", position: "absolute", fontSize: "1.4em" }} > {category.name}</p>                        
                         
                         <img src={`./images/${banner.url}`} width="180%"  alt="" />
-                        
+                        </Link>
                     </div>
-                </div></Link>
+                </div>
                 
                 <div  className="col-sm-5 col-xs-6 zero">
-                    <Link to={`${path}/${category.url}`} >     
+                   
                     <div className="bg-sm " style={{ width:"50%",position:"relative",float:"left" }}>
+                        <Link to={`${path}/${category.url}`} >     
                         <div className="custom-overlay" ></div>
                         <img src={`./images/${banner.url}`} className="" width="200%" alt="" />
                         <div className="left-cut"></div>
-                    </div></Link>
-                    <Link to={`${path}/${category.url}`} >     
+                        </Link>
+                    </div>
                     <div className="bg-sm" style={{ width: "50%", float: "left", position: "relative" }}>
+                        
                         <p className="hover-title left-cut" style={{}} > {category.name}</p>
-
-                    </div></Link>
-                    <Link to={`${path}/${category.url}`} >     
+                    </div>
                     <div className="bg-sm" style={{width: "50%", float: "left", position: "relative" }}>
+                       
                         <p className="hover-title" style={{}} > {category.name}</p>
-
-                    </div></Link>
-                    <Link to={`${path}/${category.url}`} >     
+                    </div>
                     <div className="bg-sm" style={{  width: "50%", float: "left", position: "relative" }}>
+                        <Link to={`${path}/${category.url}`} >     
+                        
                         <div className="custom-overlay" ></div>
                         <img src={`./images/${banner.url}`} width="200%" alt="" />
                         <div className="right-cut"></div>
+                        </Link>
+                        
                     </div>
-                    </Link>
                     
-                    <div className="clearfix"> </div>
                     
                 </div>
   

@@ -2,7 +2,9 @@ import React,{Component}  from 'react';
 
 class Footer extends Component {
     render() {
+        if(window.location.pathname == "/cart") return null;
         return (
+
             <footer className="container" style={{marginTop:"20px"}}>
                 <div className="news-letter" >
 
@@ -40,7 +42,7 @@ class Footer extends Component {
                     </div>
 
                 </div>
-                <div className="chat-box">
+                <div className="chat-box hiden-xs" >
                     <ul className="nav navbar-nav fixed-bottom " >
                     
                         <li className="dropdown ">
