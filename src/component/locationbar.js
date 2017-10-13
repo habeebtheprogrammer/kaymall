@@ -15,7 +15,7 @@ var id = (match.path === "/category/:title/:id") ?
             </Link>
         </div>: null;
     return (
-        <div className="locationbar" style={{ background: "#fff", borderBottom: "1px solid #eee",margin:"0px 0px 20px",fontSize:"0.8em"}}>
+        <div className="locationbar" style={{ background: "#fff", borderBottom: "1px solid #eee",margin:"0px 0px 20px",fontSize:"0.9em"}}>
         
          <div className="row">
            

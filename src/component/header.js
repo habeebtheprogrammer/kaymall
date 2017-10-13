@@ -36,7 +36,7 @@ class Header extends Component {
                             
                            
                             <i className="fa fa-car" ></i>
-                            <span>Homemarket</span>
+                            <span style={{ color: "#000", fontWeight: "bold" }}>Home</span><span style={{ color: "#000", fontWeight: "bold" }}>Market</span>
                             
                         </Link>
                     </div>
