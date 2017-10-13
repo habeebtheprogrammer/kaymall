@@ -130,7 +130,7 @@ nav .navbar-toggle {
   margin-left: 5px;
   padding: 4px 8px;
   border-radius: 20px;
-  background: #f16439;
+  background: #f17e0a;
   color: #eee;
   font-size: 0.8em;
 }
@@ -581,8 +581,8 @@ footer{
   border: 1px solid #eee;
 }
 .cart-icon span{
-  padding: 0px 3px;
-  background: orange ;
+  padding: 0px 2px;
+  background: #f17e0a;
   color:#fff;
 }
 }
