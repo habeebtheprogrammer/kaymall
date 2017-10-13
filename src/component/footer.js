@@ -42,7 +42,7 @@ class Footer extends Component {
                     </div>
 
                 </div>
-                <div className="chat-box hiden-xs" >
+                <div className="chat-box hidden-xs" >
                     <ul className="nav navbar-nav fixed-bottom " >
                     
                         <li className="dropdown ">

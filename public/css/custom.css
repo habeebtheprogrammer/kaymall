@@ -510,8 +510,10 @@ nav .middle-grid{
 ::-webkit-input-placeholder{
   color: #bbb;
   opacity: 1;
-  padding-left: 5px;
 
+}
+.search-bar{
+  padding:0px 0px 0px 15px;
 }
 .hover-title{
   font-size: 0.9em;
@@ -573,13 +575,13 @@ footer{
   padding: 30px 0px
 }
 .item-card center{
-  background :#F8FCFF;  
+  background :#E5FAF8;  
 }
 .item-card .anchor{
   border: 1px solid #eee;
 }
 .cart-icon span{
-  padding: 1px 3px;
+  padding: 0px 3px;
   background: orange ;
   color:#fff;
 }
