@@ -582,7 +582,7 @@ footer{
   font-size: 1.8em;
 }
 .navbar-brand{
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 .news-letter{
   padding: 30px 0px
@@ -595,9 +595,7 @@ footer{
 .anchor{
   border-top: 1px solid #E9E9E9;
 }
-.item-card center{
-  background: #F8FDFF
-}
+
 .bg-lg .custom-overlay{
     position: absolute;
   width: 100%;

@@ -69,7 +69,7 @@ class Itemcard extends Component {
 
 
                         <button type="button" onClick={this.updateCart.bind(this)} style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right: "10px", bottom: "15px", position: "absolute", padding: "4px 15px" }} id="addToCart" className="btn addToCart hidden-xs">Add to Cart</button>
-                        <a href={`${this.props.match.url}/${this.props.title}`}  style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right: "10px", bottom: "15px", position: "absolute", padding: "4px 15px" }}  className="btn ">BUY</a>
+                        <a href={`${this.props.match.url}/${this.props.title}`}  style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right: "10px", bottom: "15px", position: "absolute", padding: "4px 15px" }}  className="btn hide-sm">BUY</a>
 
 
                     </div>
