@@ -3,9 +3,13 @@ html{
       -ms-text-size-adjust: 100%;
        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+@font-face{
+  font-family: avenir;
+  src: url('../../fonts/Avenir LT 65 Medium.ttf')
+}
 body{
   color:  grey;
-   font-family:"Avenir Black";
+   font-family: avenir;
    /* background: linear-gradient(#ccc,transparent 50%); */
    background: #F8F8F8;
 }
@@ -104,7 +108,7 @@ nav .navbar-toggle {
     height: 2px;
      background: #000000;
      padding: 0px;
-     margin: 2px 0px -2px;
+     margin: 5px 0px -2px;
 }
 
 .search-bar{
@@ -315,7 +319,7 @@ label span{
 }
 #brand-carousel .nav li a{
   margin: 15px 30px;
-  font-size: 1em;
+  font-size: 1.1em;
   float: left;
 }
 footer .fixed-bottom{
@@ -327,7 +331,7 @@ footer .fixed-bottom{
   right: 20px;
 }
 .item-price{
-  margin: 0px; color: #f16439;; font-size: 1.4em; font-weight: bold;
+  margin: 0px; color: #f16439; font-size: 1.4em; font-weight: bold;
 }
 footer .navbar-nav a.dropdown-toggle  {
   padding: 10px 15px;
@@ -342,7 +346,6 @@ footer .navbar-nav a.dropdown-toggle  {
   padding: 0px;
 }
 .item-card{
-      font-size: 1em;
     float:left;
     width:33.33%;
     padding: 0px 5px 20px;
@@ -379,6 +382,7 @@ select.form-control{
 }
 .locationbar{
   padding: 0px 0px;
+  margin:0px 0px 10px
 }
 .locationbar .pad,.locationbar .pad a{
   margin: 10px 5px;
@@ -447,6 +451,7 @@ select.form-control{
 }
 .locationbar{
   padding: 0px 10px;
+  margin:0px 0px 20px
 }
 
 .navbar-brand {
@@ -522,9 +527,6 @@ nav .middle-grid{
   height: 120px;
   
 }
-.search-bar{
-
-}
 .hover-title{
   font-size: 0.9em;
   font-weight: normal;
@@ -554,14 +556,13 @@ nav .middle-grid{
   width: 100%;
   font-size: 1em;
   padding: 0px;
-  margin: 10px 0px 10px;
+  margin: 0px 0px 10px;
   border: 1px solid #eee;
   
 }
 .navbar-brand{
   height: inherit;
-  padding:10px 10px;
-  font-size: 1.1em;
+  padding:13px 10px;
 }
 button.navbar-toggle{
   padding: 4px 10px ;
@@ -575,7 +576,7 @@ footer{
   text-align: center;
 }
 .discount1{
-  padding: 2px 5px;
+  padding: 1px 6px;
 }
 .news-letter-title{
   font-size: 1.8em;

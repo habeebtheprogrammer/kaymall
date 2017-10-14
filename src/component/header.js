@@ -32,19 +32,19 @@ class Header extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px"}}>
+                        <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"12px 7px 0px"}}>
                             <i className="fa fa-shopping-cart" style={{ color:"#aaa"}}></i>
                             <span className="addedItems">{this.props.itemsInCart.length}</span>
                         </Link>
-                         <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px"}}>
+                        <Link to="/cart" className="cart-icon pull-right hide-sm" style={{ margin:"12px 7px 0px"}}>
                             <i className="fa fa-comment" style={{ color: "#aaa" }}></i>
-                            <span className="addedItems">{this.props.itemsInCart.length}</span>
+                            <span className="addedItems" style={{ background: "#f16439"}}>{this.props.itemsInCart.length}</span>
                         </Link>
                         <Link className="navbar-brand" to="/">
                             
                            
-                            <i className="fa fa-car" ></i>
-                            <span style={{ color: "#000", fontWeight: "bold" }}>Home</span><span style={{ color: "#000", fontWeight: "bold" }}>Market</span>
+                            <span style={{ color: "#000", fontWeight: "bold" }}>KAYSTORE</span>
+                            <i className="fa fa-shopping-cart" ></i>
                             
                         </Link>
                     </div>

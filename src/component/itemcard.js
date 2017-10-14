@@ -46,7 +46,7 @@ class Itemcard extends Component {
                     <div className="anchor" style={{ "padding": "10px 10px 10px" }}>
                         <a href={`${this.props.match.url}/${this.props.title}`} className="title" style={{ "textDecoration": "none" }}>
 
-                            <span style={{ textTransform: "capitalize", fontSize: "1em" }}> {subtitle}</span>
+                            <span style={{ textTransform: "capitalize", fontSize: "1.1em" }}> {subtitle}</span>
                             {/* <b>{title}</b> */}
 
 
@@ -59,16 +59,17 @@ class Itemcard extends Component {
                         <p className="pull-right "> <i className="fa fa-circle" style={{ fontSize: "0.6em", color: "green", marginRight: "3px" }}></i> 2 in stock</p>
 
 
-                        <p className="slash" style={{ margin: "0px", color: "#ccc" }}><s><b>{this.props.slash}</b></s></p>
+                        <p className="slash" style={{ margin: "0px",fontSize:"1.2em", color: "#ccc" }}><s><b>{this.props.slash}</b></s></p>
                         <p className="item-price" style={{}}>{this.props.price} </p>
-                        <p style={{ "margin": "0px" }}>
+                        <p style={{ "margin": "0px",fontSize:"1.1em" }}>
                             Dolce n Gabbana
 
                             </p>
 
 
 
-                        <button type="button" onClick={this.updateCart.bind(this)} style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right: "10px", bottom: "15px", position: "absolute", padding: "4px 15px" }} id="addToCart" className="btn addToCart">Add to Cart</button>
+                        <button type="button" onClick={this.updateCart.bind(this)} style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right: "10px", bottom: "15px", position: "absolute", padding: "4px 15px" }} id="addToCart" className="btn addToCart hidden-xs">Add to Cart</button>
+                        <a href={`${this.props.match.url}/${this.props.title}`}  style={{ background: "#F5611D", color: "#fff", borderRadius: "20px", right: "10px", bottom: "15px", position: "absolute", padding: "4px 15px" }}  className="btn ">BUY</a>
 
 
                     </div>
