@@ -580,7 +580,9 @@ footer{
 }
 .news-letter-title{
   font-size: 1.8em;
-  color: #808080;
+}
+.navbar-brand{
+  font-size: 1.3em;
 }
 .news-letter{
   padding: 30px 0px
@@ -592,6 +594,9 @@ footer{
 }
 .anchor{
   border-top: 1px solid #E9E9E9;
+}
+.item-card center{
+  background: #F8FDFF
 }
 .bg-lg .custom-overlay{
     position: absolute;
