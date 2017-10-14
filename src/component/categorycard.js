@@ -31,11 +31,14 @@ const Categorycard = ({category,banner,products,match})=>{
                           
                 <div className="  col-sm-5 col-xs-6 zero" >
                     <div className="bg-lg" style={{ overflow: "hidden"}}>
-                        <Link to={`${path}/${category.url}`} >     
-                        <div className="custom-overlay"></div>
-                        <p className="show-title" style={{ color: "#fff",fontWeight:"bold",textTransform:"capitalize", padding:"30% 35%",textAlign:"center", position: "absolute", fontSize: "1.4em" }} > {category.name}</p>                        
+                        <Link to={`${path}/${category.url}`} >   
+                          
+                        <div className="custom-overlay">
+                                <p className="show-title" style={{ color: "#fff",position:"absolute", fontWeight: "bold", textTransform: "capitalize",  textAlign: "center", }} > {category.name} </p>                        
+                        </div>
                         
                         <img src={`./images/${banner.url}`} width="180%"  alt="" />
+                        
                         </Link>
                     </div>
                 </div>

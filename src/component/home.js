@@ -14,7 +14,7 @@ class Home extends Component {
                 
                 <div className="container policy">
                     
-                    <div className="row " style={{fontSize:"0.8em",color:"#aaa", textAlign:"center"}}>
+                    <div className="row " style={{fontSize:"0.9em",color:"#aaa", textAlign:"center"}}>
                         <div className="col-sm-4 zero">
                         
                         <i className="fa fa-ship" style={{marginRight:"5px",color:"#ccc"}}></i>

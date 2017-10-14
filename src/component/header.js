@@ -32,11 +32,11 @@ class Header extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px 8px"}}>
+                        <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px"}}>
                             <i className="fa fa-shopping-cart"></i>
                             <span className="addedItems">{this.props.itemsInCart.length}</span>
                         </Link>
-                         <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px 8px"}}>
+                         <Link to="/cart" className="cart-icon pull-right hide-sm" style={{margin:"7px"}}>
                             <i className="fa fa-comment"></i>
                             <span className="addedItems">{this.props.itemsInCart.length}</span>
                         </Link>
@@ -92,7 +92,7 @@ class Header extends Component {
                 </div>
                 
 
-                <div className="hidden-lg hidden-sm hidden-md" style={{ background:"#f16439",color:"#fff",fontSize:"1em",padding:"20px 0px 20px 20px"}}>
+                <div className="hidden-lg hidden-sm hidden-md hidden-xs" style={{ background:"#f16439",color:"#fff",fontSize:"1em",padding:"20px 0px 20px 20px"}}>
                     <div className="row">
                         <div className="col-xs-8 ">
                             <span>Home market store find it for free on Google Play</span>
