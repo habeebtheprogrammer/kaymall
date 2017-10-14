@@ -546,7 +546,7 @@ nav .middle-grid{
   width: 100%;
   font-size: 1em;
   padding: 0px;
-  margin: 5px 0px 10px;
+  margin: 10px 0px 10px;
 }
 .navbar-brand{
   height: inherit;
@@ -575,13 +575,13 @@ footer{
   padding: 30px 0px
 }
 .item-card center{
-  background :#F2F5F3;  
+  background :#E8F0EB;  
 }
 .item-card .anchor{
   border: 1px solid #eee;
 }
 .cart-icon span{
-  padding: 0px 2px;
+  padding: 1px 3px;
   background: #f17e0a;
   color:#fff;
 }
