@@ -589,6 +589,9 @@ footer{
   background: #f17e0a;
   color:#fff;
 }
+.anchor{
+  border-top: 1px solid #E9E9E9;
+}
 .bg-lg .custom-overlay{
     position: absolute;
   width: 100%;
