@@ -28,6 +28,9 @@ class Home extends Component {
             this.props.fetchCat(data)
         ));
     }
+    componentDidMount() {
+        window.scrollTo({ top: 0 })
+    }
     
 
 

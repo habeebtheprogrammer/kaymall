@@ -96,7 +96,6 @@ class Cart extends Component {
                          {this.props.cart.itemsInCart.length === 0 ? <p className="slideInDown animated">
                                 <center> <h3> Cart Is Empty</h3>
                                     please check back later<br />
-                                     <img src="../../images/empty-cart.png" width="30%" class="img-responsive" alt="cartimg" />
                                  
                                  </center>
                              </p>

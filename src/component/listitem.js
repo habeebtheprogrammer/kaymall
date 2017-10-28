@@ -56,11 +56,11 @@ class Listitem extends Component {
             <div>
                 <Locationbar match={this.props.match} />
                 <div className="container" style={{position:"relative",overflow:"hidden"}} >
-                    {Listitem.length ? Listitem:<p className="slideInDown animated">
+                    {Listitem.length ? Listitem:
+                    <p className="slideInDown animated">
                         <center>
                             <h3> Store Is Empty</h3>
                             please check back later<br />
-                        <img src="../../images/empty-cart.png" width="30%" class="img-responsive" alt="cartimg" />
                         </center>
                         </p>}
                     <div className="clearfix">

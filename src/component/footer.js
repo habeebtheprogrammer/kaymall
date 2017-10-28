@@ -25,7 +25,9 @@ class Footer extends Component {
             success:false
         }
     }
-    
+    componentWillUpdate(nextProps, nextState) {
+        window.scrollTo({ top: 0 })
+    }
     
     typing(e){
         var data = e.target.value
@@ -55,7 +57,7 @@ class Footer extends Component {
                         <div className="col-xs-12 zero">
                             <center> <b > Follow us on</b></center>
                             <hr style={{ margin: "10px " }} />
-                            <img src="../../images/Women's Shoes.jpg" width="100%" class="img-responsive" alt="Image" />
+                            <img src="../../images/Women's_Shoes.jpg" width="100%" class="img-responsive" alt="img" />
                         </div>
                         <div className="col-xs-6 zero" style={{ padding: "10px 2.5px 10px 10px" }}>
                             <img src="../../images/1.png" width="100%" class="img-responsive" alt="Image" />

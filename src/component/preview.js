@@ -59,7 +59,7 @@ class Preview extends Component {
     }
 
     componentDidMount() {
-
+        window.scrollTo({ top: 0 })
     }
 
     updateCart() {
@@ -75,10 +75,6 @@ class Preview extends Component {
 
     }
 
-    recent(e){
-        console.log(this)
-        console.log(e)
-    }
     render() {
         console.log(this.props)
         var item = []
@@ -260,7 +256,7 @@ class Preview extends Component {
                                     <div className="col-xs-12 " style={{ paddingTop: "10px" }}>
                                        <center> <b > Follow us on</b></center>
                                         <hr style={{margin:"10px "}}/>
-                                        <img src="../../images/Women's Shoes.jpg" width="100%" class="img-responsive" alt="Image" />
+                                        <img src="../../images/Women's_Shoes.jpg" width="100%" class="img-responsive" alt="Image" />
                                     </div>
                                     
                                     <div className="col-xs-6" style={{padding:"10px 2.5px 10px 10px" }}>

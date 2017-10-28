@@ -10,7 +10,10 @@ function mapStateToProps(state) {
 }
 
 class Header extends Component {
-
+    componentWillUpdate(nextProps, nextState) {
+        window.scrollTo({ top: 0 })
+    }
+    
     render() {
         var rand = Math.random() +1 
         var img = window.location.pathname ==='/' && window.innerWidth > 500? 
@@ -35,9 +38,8 @@ class Header extends Component {
                             <i className="fa fa-shopping-cart" style={{ color:"#aaa"}}></i>
                             <span className="addedItems">{this.props.cart.itemsInCart.length}</span>
                         </Link>
-                        <Link to="/cart" className="cart-icon pull-right hide-sm" style={{ margin:"11px 4px 0px"}}>
-                            <i className="fa fa-comment" style={{ color: "#aaa" }}></i>
-                            <span className="addedItems" style={{ background: "#f16439"}}>{this.props.cart.itemsInCart.length}</span>
+                        <Link to="/login" className=" pull-right hide-sm" style={{ margin:"11px 4px 0px"}}>
+                            <i className="fa fa-user" style={{ color: "#aaa" }}></i>
                         </Link>
                         <Link className="navbar-brand" to="/">
                           
@@ -76,14 +78,14 @@ class Header extends Component {
                             </li>
                         </ul>
                         <ul className="nav navbar-nav hide-sm" >
-                            <li className=" hidden-sm" style={{ float: "left" }}><Link to="/store">Stores</Link></li>
-                            <li className=" hidden-sm" style={{ float: "left" }}><Link to="/category">category</Link></li>
-                            <li className=" hidden-sm" style={{ float: "left" }}><Link to="/seller">seller</Link></li>
-                            <li className=" hidden-sm" style={{ float: "left" }}><Link to="/login">Login</Link></li>
-                            <li className=" hidden-sm" style={{ float: "left" }}><Link to="/cart">cart 
-                               </Link></li>
-                            <li className=" hidden-sm" style={{ float: "left" }}><Link to="/affiliate">Affliate</Link></li>
-                            <li className=" hidden-sm" style={{ float: "left" }}><Link to="/faq">F.A.Q</Link></li>
+                            <li className=" hidden-sm" style={{ float: "left" }}><a href="/store">Stores</a></li>
+                            <li className=" hidden-sm" style={{ float: "left" }}><a href="/category">category</a></li>
+                            <li className=" hidden-sm" style={{ float: "left" }}><a href="/seller">seller</a></li>
+                            <li className=" hidden-sm" style={{ float: "left" }}><a href="/login">Login</a></li>
+                            <li className=" hidden-sm" style={{ float: "left" }}><a href="/cart">cart 
+                               </a></li>
+                            <li className=" hidden-sm" style={{ float: "left" }}><a href="/affiliate">Affliate</a></li>
+                            <li className=" hidden-sm" style={{ float: "left" }}><a href="/faq">F.A.Q</a></li>
                         </ul>
                     </div>
                 </nav>

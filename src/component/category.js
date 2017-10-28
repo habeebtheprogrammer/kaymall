@@ -19,8 +19,12 @@ class Category extends Component {
         }).then((data) => (
             this.props.fetchCat(data)
         ));
-        window.scrollTo({ top: 0 })
     }
+    componentDidMount() {
+        window.scrollTo({ top: 0 })
+        
+    }
+    
 
     render() {
    
