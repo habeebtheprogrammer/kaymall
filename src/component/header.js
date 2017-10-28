@@ -42,9 +42,7 @@ class Header extends Component {
                             <i className="fa fa-user" style={{ color: "#aaa" }}></i>
                         </Link>
                         <Link className="navbar-brand" to="/">
-                          
                             <img src="../../images/kaystore.png" width="110%"class="img-responsive" alt="logo"/>
-                          
                         </Link>
                     </div>
  
