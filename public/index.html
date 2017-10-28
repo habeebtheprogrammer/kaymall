@@ -10,9 +10,11 @@
     <!-- Bootstrap CSS -->
     <link href="../../css/bootstrap.css" rel="stylesheet">
     <!-- <link href=".dist/css/bootstrap.css" rel="stylesheet"> -->
+     
     <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="./admin/css/adminLTE.css"> -->
     <link rel="stylesheet" href="../../css/custom.css">
+    <link rel="stylesheet" href="../../css/animate.min.css">
 
     <script src="../../js/jquery.min.js"></script>
     
@@ -42,12 +44,14 @@
         $(window).scroll(function(){
          var scrollTop = $(window).scrollTop();
           if(scrollTop >270){
+            $('.fixed-bar').addClass('slideInDown');
+            $('.fixed-bar').addClass('animated');
             $('.fixed-bar').addClass('navbar-fixed-top');
             // $('.bar3 ul li span').addClass('navborder');
             
           }
           else{
-            
+            $('.fixed-bar').removeClass('slideInDown');
              $('.fixed-bar').removeClass('navbar-fixed-top')
           }
         });

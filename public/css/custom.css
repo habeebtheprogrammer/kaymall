@@ -51,6 +51,7 @@ a:hover{
 .nav.navbar-nav a:focus{
   background: #fff;
 }
+
 .item-card:hover >div{
   box-shadow: 0 3px 8px 0 grey;
   -webkit-transition: 0.2s ease-in  ;
@@ -69,7 +70,7 @@ a:hover{
   font-size:0.8em;
 }
 .item-card:hover  .discount1{
-  background:#f16439;
+  background:rgb(249, 59, 96);
   -webkit-transition: 0.2s ease-in  ;
   -moz-transition: 0.2s ease-in  ;
   transition: 0.2s ease-in  ;
@@ -93,18 +94,13 @@ a{
 .navbar-brand {
   text-transform: capitalize;
   color: #000;
- padding: 15px 10px;
-
-}
-.navbar-brand i{
-  padding-right: 10px;
-  color: #f16439;
+ padding: 9px 10px 2px;
+height: inherit;
 }
 nav .navbar-toggle {
   margin-right:6px
 }
 .navbar-toggle .icon-bar{
-    width: 10px;
     height: 2px;
      background: #000000;
      padding: 0px;
@@ -159,18 +155,29 @@ nav .navbar-toggle {
     font-weight: bold;
     text-transform: capitalize;
 }
-#added-success .modal-body{
-  background: #3aba64;
+#added-success .modal-body,#newsletter .modal-body,.modal-body,#seller .modal-body{
+  background: linear-gradient(to right,#f93b60,#fc9721);
   color:#fff;
 }
 .home-icon span{
   color: #f16439;
   font-size: 0.8em;
 }
+.fixed-right{
+  position: fixed;
+  right: 20px;
+}
+a.btn:hover{
+  background: #f16439;
+  color: #fff;
+  -webkit-transition: 0.3s ease-in  ;
+  -moz-transition: 0.3s ease-in  ;
+  transition: 0.3s ease-in  ;
+}
  .affiliate .text-lg{font-size:2.5em;font-family:verdana;font-weight:bold}
 .affiliate .text span{margin-right:5px  }
 .affiliate .btn-default, .modal .btn-default{
-  padding:5px 30px;
+  padding:10px 30px;
   margin:10px 10px 10px 0px;
 font-size:0.8em;
 border:1px solid #eee;
@@ -240,7 +247,16 @@ color:#fff;border-radius:20px}
   overflow: hidden;
   height: 150px
 }
+.preview-fixed{
+   padding: 1.4%;width:20%;position:fixed;z-index:1024; top:10%;
 
+}
+.preview-unfixed{
+ padding: 7%; 
+ -webkit-transition: 0.3s ease-in  ;
+   -moz-transition: 0.3s ease-in  ;
+   transition: 0.3s ease-in  ;
+}
 .bg-lg:hover img{
   width:190%;
   -webkit-transition: 0.2s ease-in  ;
@@ -439,6 +455,7 @@ footer p.icons a{
   color: #000;
   margin-right: 3px
 }
+
 footer .grid2 ul{
   padding: 0px;
 }
@@ -502,9 +519,7 @@ footer .grid3 button{
   margin:0px 0px 20px
 }
 
-.navbar-brand {
-  /* padding: 15px 10px; */
-}
+
 .padding-20px{
   padding: 0px;
 }
@@ -608,12 +623,9 @@ nav .middle-grid{
   border: 1px solid #eee;
   
 }
-.navbar-brand{
-  height: inherit;
-  padding:13px 10px;
-}
+
 button.navbar-toggle{
-  padding: 4px 10px ;
+  padding: 1px 10px ;
 }.navbar{
   min-height: 0px;
 }
@@ -636,7 +648,7 @@ footer .news-letter{
   padding: 30px 0px
 }
 .cart-icon span{
-  padding: 1px 3px;
+  padding: 0px 3px;
   background: #f17e0a;
   color:#fff;
 }
@@ -652,4 +664,13 @@ footer .news-letter{
   
 }
 
+.policy.container{
+  padding: 0px
+}
+.navbar-brand {
+ padding: 5px 10px 2px;
+}
+.home-policy i{
+  color: rgb(252, 151, 33)
+}
 }

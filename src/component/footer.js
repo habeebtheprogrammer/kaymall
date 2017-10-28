@@ -1,11 +1,72 @@
 import React,{Component}  from 'react';
+import {connect} from "react-redux";
+import { apiCalls } from "../reducers/reducer"
+import {withRouter} from "react-router-dom";
+import { bindActionCreators } from 'redux';
+import { fetchCat,fetchItems } from "../actions/actions";
+import $ from "jquery"
+function mapStateToProps(state) {
+    return {
+        apiCalls: state.apiCalls,
+    }
+}
+function matchDispatchToProps(dispatch) {
+    return bindActionCreators({
+        fetchCat: fetchCat,
+    }, dispatch)
+
+}
 
 class Footer extends Component {
+    constructor(){
+        super();
+        this.state = {
+            email: null,
+            success:false
+        }
+    }
+    
+    
+    typing(e){
+        var data = e.target.value
+        this.setState({email:data});
+    }
+    submit(e){
+        
+        e.preventDefault()
+        $.post("http://localhost:3001/newsletter",{email:this.state.email},function (data) {
+            console.log(data)
+           
+            if(data.email){
+                $(".email").val("")
+                this.setState({ email: this.state.email, success: true })
+            } 
+          }.bind(this))
+        
+        
+    }
     render() {
+        console.log(this.state)
         if(window.location.pathname == "/cart") return null;
         return (
             <footer>
             <div className="container" style={{marginTop:"20px"}}>
+                    <div className="row hide-sm" style={{ marginBottom: "10px",paddingTop:"10px", background:"#fff" }}>
+                        <div className="col-xs-12 zero">
+                            <center> <b > Follow us on</b></center>
+                            <hr style={{ margin: "10px " }} />
+                            <img src="../../images/Women's Shoes.jpg" width="100%" class="img-responsive" alt="Image" />
+                        </div>
+                        <div className="col-xs-6 zero" style={{ padding: "10px 2.5px 10px 10px" }}>
+                            <img src="../../images/1.png" width="100%" class="img-responsive" alt="Image" />
+
+                        </div>
+                        <div className="col-xs-6 zero" style={{ padding: "10px 10px 10px 2.5px" }}>
+                            <img src="../../images/2.png" width="100%" class="img-responsive" alt="Image" />
+
+                        </div>
+
+                </div>
                 <div className="news-letter" >
 
                     <div className="row">
@@ -15,18 +76,19 @@ class Footer extends Component {
 
                             <form action="" method="POST" className="form-inline" style={{ margin: "1% 0px 2%" }} >
 
-                                <div className="form-group  col-sm-9">
+                                <div className="form-group  col-sm-6">
                                     <label className="sr-only" >label</label>
-                                    <input type="email" className="form-control" id="" style={{width:"100%"}}/>
+                                    <input type="email" onChange={this.typing.bind(this)} name="email" className="form-control email" id="" style={{width:"100%"}}/>
                                 </div>
                                 
-                                <div className="form-group">
-                                    <button type="submit" className="btn btn-custom ">Subscribe</button>
+                                <div className="form-group ">
+                                        <button onClick={this.submit.bind(this)} data-toggle="modal" data-target="#newsletter" className="btn btn-custom ">Subscribe</button>
                                 </div>
+                              
                                 
                             </form>
-                            <div style={{margin:"30px 0px"}}>Subscribe to receive our latest deals, gifts, and more!</div>
-
+                            <div style={{margin:"30px 0px"}}>
+                                Subscribe to receive our latest deals, gifts, and more!</div>
                             </div>
 
                         <div className=" col-sm-4">
@@ -60,10 +122,42 @@ class Footer extends Component {
                         </li>
                     </ul>
                 </div>
-
+                   <div className="modal fade" id="newsletter" >
+                        <div className="modal-dialog modal-lg" >
+                            <div className="modal-content " style={{ boxShadow: "0px 0px" }}>
+                                <div className="modal-body">
+                                    <div className="row">
+                                        <div className="col-xs-1">
+                                            <i className="fa fa-check-circle" style={{ fontSize: "1.5em" }}></i>
+                                        </div>
+                                        <div className="col-xs-10">
+                                            <center>
+                                                {this.state.success ?
+                                                    <span> You have Subscribe to our newsletter successfully <i className="fa fa-smile-o"></i>
+                                                    </span>
+                                                    : <span> Your Subscribtion to our newsletter was not successfully
+                                                    </span>
+                                                }
+                                                 
+                                            <div>
+                                                    
+                                                        <a className="btn btn-default" href="#" data-dismiss="modal" role="button" style={{ border: "1px solid #fff", margin: "10px 10px 10px 0px" }}>CONTINUE</a>
+                                                       
+                                                </div>
+                                            </center>
+                                        </div>
+                                        <div className="col-xs-1">
+                                            <button data-dismiss="modal" className="btn  pull-right" href="#" style={{ padding: "0px", background: "transparent" }}><i className="fa fa-times" style={{ fontSize: "1.5em" }}></i> </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
       
-                        
+                
                     
+           
             </div>
             <div className="footer" style={{marginTop:"30px"}}>
                 <div className="container">
@@ -73,33 +167,23 @@ class Footer extends Component {
                             <div className="grid1">
                                 <p>
                                   sit a asperiores maxime est adipisci. Laudantium suscipit quia nobis.lorem
-
+                                  sit a asperiores maxime est adipisci. Laudantium suscipit quia nobis.lorem
+                                    sit a asperiores maxime est adipisci. Laudantium suscipit quia nobis.lorem 
                                 </p>
-                                <p><i className="fa fa-phone"></i> +234-8181362484</p>
-                                <p><a href=""><i className="fa fa-envelope"></i> habibmail31@gmail.com </a></p>
-                                <p className="icons"> <a href="" className="btn btn-xs"><i className="fa fa-git"></i></a>
-                                    <a href="" className="btn btn-xs"><i className="fa fa-facebook"></i> </a>
-                                    <a href="" className="btn btn-xs"><i className="fa fa-instagram"></i></a>
-                                    <a href="" className="btn btn-xs"> <i className="fa fa-twitter"></i> </a>
-                                    <a href="" className="btn btn-xs"><i className="fa fa-yahoo"></i> </a>
-                                    <a href="" className="btn btn-xs"><i className="fa fa-linkedin"></i></a> </p>
-
+                               
                             </div>
                         </div>
                         <div className="col-sm-3 zero ">
                             <div className="grid2">
                                 <h4>Information</h4>
-                                <ul>
-                                    <li><a href="#">  About Us </a></li>
-                                    <li><a href="#">My Account </a></li>
-                                    <li><a href="#"> Shipping & Returns  </a></li>
-                                    <li><a href="#"> Order History  </a></li>
-                                    <li><a href="#">  Help & F.A.Q  </a></li>
-                                    <li><a href="#">  Conditions  </a></li>
-                                    <li><a href="#"> Contact Us  </a></li>
-                                    <li><a href="#">  Manufacturers  </a></li>
-                                    <li><a href="#">  Online Supports  </a></li>
-                                    <li><a href="#">  privacy </a></li>
+                                <ul style={{textTransform:"capitalize"}}>
+                                    {this.props.apiCalls.categories ?
+                                            this.props.apiCalls.categories.map((item) => (<li><a href={`/category/${item.title}`}> {item.title}</a></li>))
+                                    :null}
+                                    <li><a href="/account">My Account </a></li>
+                                    <li><a href="/help"> Shipping & Returns  </a></li>
+                                    <li><a href="/faq">  F.A.Q  </a></li>
+                                    <li><a href="/affiliate">  Affiliate </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -125,11 +209,18 @@ class Footer extends Component {
                         </div>
                         <div className="col-sm-3 zero">
                             <div className="grid4">
-                                <h4>Recent Post</h4>
-                                <p> Lorem ipsum dolor sit amet consectetur adipiscing elitos.X
-                            <br />by <a href="#">Habeeb</a> </p>
-                                <p> Lorem ipsum dolor sit amet consectetur adipiscing elitos.X
-                            <br />by <a href="#">Habeeb</a> </p>
+                                <h4>CONTACT US</h4>
+                                <p>
+                                    sit a asperiores maxime est adipisci. Laudantium suscipit quia nobis.lorem
+                                </p>
+                                <p><i className="fa fa-phone"></i> +234-8181362484</p>
+                                <p><a href="github.com/habeebtheprogrammer"><i className="fa fa-envelope"></i> habibmail31@gmail.com </a></p>
+                                <p className="icons"> <a href="" className="btn btn-xs"><i className="fa fa-git"></i></a>
+                                    <a href="facebook.com/kaystore" className="btn btn-xs"><i className="fa fa-facebook"></i> </a>
+                                    <a href="facebook.com/kaystore" className="btn btn-xs"><i className="fa fa-instagram"></i></a>
+                                    <a href="twitter.com/kaystore" className="btn btn-xs"> <i className="fa fa-twitter"></i> </a>
+                                    <a href="twitter.com/kaystore" className="btn btn-xs"><i className="fa fa-yahoo"></i> </a>
+                                    <a href="linkedin.com/kaystore" className="btn btn-xs"><i className="fa fa-linkedin"></i></a> </p>
                             </div>
                         </div>
                     </div>
@@ -144,9 +235,13 @@ class Footer extends Component {
                     </div>
                 </div>
             </div>
+            {/* <div className="slideInLeft animated" style={{ "position": "fixed", "bottom": "300", "left": "0", }}>
+
+                    <button style={{ "fontSize": "2.3em", "border-radius": "60px", "border": "1px solid #aaa", background:"#f16439" }} className="btn btn-default"><i className="fa fa-music" style={{color:"#fff"}}></i></button>
+            </div> */}
             </footer>
         );
     }
 }
 
-export default Footer;
+export default withRouter(connect(mapStateToProps,matchDispatchToProps)(Footer))

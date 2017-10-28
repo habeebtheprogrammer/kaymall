@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const Notfound =()=>(
-       <div>
+       <div className="">
            <h3> Not Found</h3>
         </div>
 )

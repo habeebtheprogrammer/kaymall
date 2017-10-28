@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Carousel = ({img1,img2,img3})=>(
-    <div id="first-carousel" className="carousel slide" data-ride="carousel">
+    <div id="first-carousel" className="carousel slide" data-interval="2000" data-ride="carousel">
         <ol className="carousel-indicators">
             <li data-target="#first-carousel" data-slide-to="0" className=""></li>
             <li data-target="#first-carousel" data-slide-to="1" className=""></li>

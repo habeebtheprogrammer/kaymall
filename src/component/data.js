@@ -4,7 +4,7 @@ const Store = {
         
         {
             id: uuid.v4(),
-            category: {name:"womens fashion", url:"womens-fashion"},
+            category: {name:"womens fashion", url:"womens fashion"},
             banner: { url: "female_shoes_large_banner_800x450.jpg" },
             products: [{ id: uuid.v4(), url: "1(35).jpg", title: "Lorem ipsumq adipisicing elit.", price: "$43,232", discount: "-32%", slash: "$24,320" },
                 { id: uuid.v4(), url: "coll5.jpg", title: "amet consectetur adipisicing elit.", price: "$402", discount: "-2%", slash: "$320" },
@@ -19,7 +19,7 @@ const Store = {
         },
         {
             id: uuid.v4(),
-            category: { name: "mens fashion", url: "mens-fashion" },
+            category: { name: "mens fashion", url: "mens fashion" },
             banner: { url: "male_banner.jpg" },
             products: [{ id: uuid.v4(), url: "other-6485-7077231-1-product.jpg", title: "Lofrem ipsum adipisicing elit.", price: "$43,232", discount: "-32%", slash: "$24,320" },
             { id: uuid.v4(), url: "other-2454-770172-1-product.jpg", title: "amet conseactetur adipisicing elit.", price: "$402", discount: "-2%", slash: "$320" },
@@ -34,7 +34,7 @@ const Store = {
         },
         {
             id: uuid.v4(),
-            category: { name: "Phones and Tablet", url: "phones&tablet" },
+            category: { name: "Phones and Tablet", url: "phones & tablet" },
             banner: { url: "demo3_885x450-1.jpg" },
             products: [{ id: uuid.v4(), url: "demo1_product6_208x208-300x300.jpg", title: "Loreom ipsum adipisicing elit.", price: "$43,232", discount: "-32%", slash: "$24,320" },
             { id: uuid.v4(),  url: "demo1_product7_208x208-1-300x300.jpg", title: "amet conisectetur adipisicing elit.", price: "$402", discount: "-2%", slash: "$320" },
