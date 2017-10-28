@@ -43,7 +43,7 @@ class Header extends Component {
                         </Link>
                         <Link className="navbar-brand" to="/">
                           
-                            <img src="../../images/kaystore_brand.png" width="110%"class="img-responsive" alt="logo"/>
+                            <img src="../../images/kaystore.png" width="110%"class="img-responsive" alt="logo"/>
                           
                         </Link>
                     </div>
